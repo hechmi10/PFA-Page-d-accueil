@@ -262,7 +262,7 @@ header h2 {
         <a href="#">
             <input type="submit" value="Marketplace">
         </a>
-        <a href="#">
+        <a href="contact.blade.php">
             <input type="submit" value="Contact">
         </a>
         <a href="#">
