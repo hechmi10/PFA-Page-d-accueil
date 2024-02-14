@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Connexion Agriculteur</title>
+</head>
+<style>
+body {
+  background: #E3F2FD;
+  background-image:url("https://cdn.pixabay.com/photo/2014/09/09/19/07/corn-field-440338_640.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius:10%;
+  height: fit-content;
+  width:max-content;
+  background-color: green;
+  background-position: center;
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+  font-style: normal;
+}
+input[type="text"]{
+    height:fit-content;
+    width: fit-content;
+    border-radius: 50px;
+    background-color: yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-size: 25px;
+}
+input[type="password"]{
+    height:fit-content;
+    width: fit-content;
+    border-radius: 50px;
+    background-color: yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-size: 25px;
+}
+input[type="submit"]{
+  background-color:white;
+  height:1cm;
+  width:5cm;
+  border-radius:20%;
+}
+</style>
+<body>
+    <form action="Page d'acceuil PFA.blade.php" enctype="text/plain" method="POST">
+        <div class="wrapper">
+            <?php
+            include("Page d'acceuil PFA+inscription+connexion.blade.php");
+            ?>
+            <center><h1>Connexion d'un Agriculteur</h1></center>
+            <label>Email:</label>
+            <input type="text" name="email" placeholder="Email" id="email" required><br>
+            <label>Mot de passe:</label>
+            <input type="password" name="mdp" placeholder="Mot de passe" id="mdp" required><br>
+            <input type="submit" name="connecter" value="Se connecter">
+        </div>
+    </form>
+</body>
+</html>
