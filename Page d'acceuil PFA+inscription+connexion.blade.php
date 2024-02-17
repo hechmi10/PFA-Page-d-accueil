@@ -13,7 +13,7 @@ function deconnexionBD(){
     return $pdo;
 }
 $c=connexionBD();
-if(isset($_POST['inscrire'])){
+if((isset($_POST['cin'])) && (isset($_POST['nom'])) && (isset($_POST['prenom'])) && (isset($_POST['mdp'])) && (isset($_POST['email'])) && (isset($_POST['numtel'])) && (isset($_POST['inscrire']))){
     $cin=isset($_POST['cin']) ? $_POST['cin'] : '';
     $nom=isset($_POST['nom']) ? $_POST['nom'] : '';
     $prenom=isset($_POST['prenom']) ? $_POST['prenom'] : '';
