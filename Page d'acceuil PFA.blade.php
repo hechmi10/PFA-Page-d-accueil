@@ -297,10 +297,10 @@ header h2 {
       <span class="bas">
         AgriConnect,@ Tous les droits sont réservés,2024
       </span>
-      <?php
-      require("Page d'acceuil PFA+inscription+connexion.blade.php");
-      ?>
 </body>
+<?php
+require("Page d'acceuil PFA+inscription+connexion.blade.php");
+?>
 <script>
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
@@ -308,7 +308,7 @@ const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 let userMessage = null;
-const API_KEY = "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";
+const API_KEY = "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";
 const inputInitHeight = chatInput.scrollHeight;
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
@@ -336,7 +336,7 @@ const generateResponse = (chatElement) => {
         messageElement.textContent = data.choices[0].message.content.trim();
     }).catch(() => {
         messageElement.classList.add("error");
-        messageElement.textContent = "Oops! Something went wrong. Please try again.";
+        messageElement.textContent = "Erreur,veuillez réessayer";
     }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 }
 const handleChat = () => {
