@@ -308,7 +308,7 @@ const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 let userMessage = null;
-const API_KEY = "http://localhost:8888/notebooks/Train%20%26%20Test%20Chatbot.ipynb";
+const API_KEY = "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";
 const inputInitHeight = chatInput.scrollHeight;
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
