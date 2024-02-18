@@ -1,26 +1,26 @@
 <?php
-require("Page d'acceuil PFA connexion BD.blade.php");
-$c = connexionBD();
-if((isset($_POST['email'])) && (isset($_POST['mdp']))){
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : '';
-    if(!empty($email) && !empty($mdp)){
-        $stat2 = $c->prepare("SELECT * FROM agriculteurs WHERE Email = '$email' AND MotDePasse = '$mdp'");
-        $stat2->execute(array('email' => $email, 'mdp' => $mdp));
-        $result = $stat2->fetchAll(PDO::FETCH_ASSOC);
-        while($result){
-            foreach($row as $key => $value){
-                echo "$key: $value" . "<br>";
-            }
-        } 
+require("Page d'acceuil PFA Connexion BD.blade.php");
+$c=connexionBD();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if(isset($_POST['email'], $_POST['mdp']) && !empty($_POST['email']) && !empty($_POST['mdp'])){
+        $email = $_POST['email'];
+        $mdp = $_POST['mdp'];
+        $query = "SELECT * FROM agriculteurs WHERE Email = :email AND MotDePasse = :mdp";
+        $stmt = $c->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':mdp', $mdp);
+        $stmt->execute();
+        if($stmt->rowCount() > 0){
+            echo "Connexion réussie !";
+        } else {
+            echo "Identifiants incorrects. Veuillez réessayer.";
+        }
+    } else {
+        echo "Veuillez remplir tous les champs.";
     }
-    else {
-        echo "Aucun agriculteur trouvé avec ces identifiants.";
-    }
-    
+    $d=deconnexionBD();
 }
 else{
-    echo "Des données sont manquantes.";
+    echo "non valide,réessayer";
 }
-$d = deconnexionBD();
 ?>
