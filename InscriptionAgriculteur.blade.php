@@ -52,7 +52,7 @@ input[type="submit"]{
 </style>
 <body>
     <?php
-    include("Page d'acceuil PFA+inscription+connexion.blade.php");
+    require("Page d'acceuil PFA+inscription+connexion.blade.php");
     ?>
     <form action="Page d'acceuil PFA+inscription+connexion.blade.php" enctype="text/plain" method="POST">
         <div class="wrapper">
