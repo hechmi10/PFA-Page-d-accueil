@@ -54,7 +54,7 @@ input[type="submit"]{
     <?php
     include("Page d'acceuil PFA+inscription+connexion.blade.php");
     ?>
-    <form action="Page d'acceuil PFA.blade.php" enctype="text/plain" method="POST">
+    <form action="Page d'acceuil PFA+inscription+connexion.blade.php" enctype="text/plain" method="POST">
         <div class="wrapper">
          <center><h1>Inscription d'un Agriculteur</h1><center>
          <label>CIN:</label>
