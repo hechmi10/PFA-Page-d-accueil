@@ -32,7 +32,7 @@ function deconnexionBD(){
         }
     }
 }
-else{
+@else{
     echo "non valide";
 }
 @if(isset($_POST['connecter'])){
@@ -54,7 +54,7 @@ else{
         }
     }
 }
-else{
+@else{
     echo "non valide";
 }
 ?>
