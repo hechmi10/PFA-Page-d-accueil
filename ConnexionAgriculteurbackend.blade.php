@@ -1,25 +1,27 @@
 <?php
 require("Page d'acceuil PFA connexion BD.blade.php");
-if(isset($_POST['connecter'])){
-    $email=isset($_POST['email']) ? $_POST['email'] : '';
-    $mdp=isset($_POST['mdp']) ? $_POST['mdp'] : '';
-    if((!empty($email)) && (!empty($mdp))){
-        $c=connexionBD();
-        $stat2=$c->query("SELECT * FROM agriculteurs;");
-        if($stat2->execute()){
-            while($r=$stat2->fetch(PDO::FETCH_NUM)){
-                foreach($r as $v){
-                    echo "$v"."<br>";
+$c = connexionBD();
+if(isset($_POST['email'], $_POST['mdp'])){
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : '';
+    if(!empty($email) && !empty($mdp)){
+        $stat2 = $c->prepare("SELECT * FROM agriculteurs WHERE Email = :email AND MotDePasse = :mdp");
+        $stat2->execute(array('email' => $email, 'mdp' => $mdp));
+        $result = $stat2->fetchAll(PDO::FETCH_ASSOC);
+
+        if($result){
+            foreach($result as $row){
+                foreach($row as $key => $value){
+                    echo "$key: $value <br>";
                 }
             }
-            $d=deconnexionBD();
-        }
-        else{
-            echo "Connexion échouée,veuillez réessayer";
+        } else {
+            echo "Aucun agriculteur trouvé avec ces identifiants.";
         }
     }
 }
 else{
-    echo "non valide";
+    echo "Des données sont manquantes.";
 }
+$d = deconnexionBD();
 ?>
