@@ -32,6 +32,9 @@ function deconnexionBD(){
         }
     }
 }
+else{
+    echo "non valide";
+}
 @if(isset($_POST['connecter'])){
     {{ $email }}=isset($_POST['email']) ? $_POST['email'] : '';
     {{ $mdp }}=isset($_POST['mdp']) ? $_POST['mdp'] : '';
@@ -51,5 +54,7 @@ function deconnexionBD(){
         }
     }
 }
-
+else{
+    echo "non valide";
+}
 ?>
