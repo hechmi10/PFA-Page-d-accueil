@@ -21,7 +21,6 @@ body {
   border-radius:10%;
   height: fit-content;
   width:max-content;
-  background-color: green;
   background-position: center;
   font-size: medium;
   font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
@@ -31,15 +30,15 @@ input[type="text"]{
     height:fit-content;
     width: fit-content;
     border-radius: 50px;
-    background-color: yellow;
+    background-color: greenyellow;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
     font-size: 25px;
 }
-input[type="password"]{
+input[type="password"],input[type="email"]{
     height:fit-content;
     width: fit-content;
     border-radius: 50px;
-    background-color: yellow;
+    background-color: greenyellow;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
     font-size: 25px;
 }
@@ -49,20 +48,30 @@ input[type="submit"]{
   width:5cm;
   border-radius:20%;
 }
+fieldset{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius:10%;
+  height: fit-content;
+  width:max-content;
+  background-color: green;
+  border-color: greenyellow;
+}
 </style>
 <body>
-    <form action="Page d'acceuil PFA.blade.php" enctype="text/plain" method="POST">
-        <div class="wrapper">
-            <?php
-            include("Page d'acceuil PFA+inscription+connexion.blade.php");
-            ?>
-            <center><h1>Connexion d'un Agriculteur</h1></center>
-            <label>Email:</label>
-            <input type="text" name="email" placeholder="Email" id="email" required><br>
-            <label>Mot de passe:</label>
-            <input type="password" name="mdp" placeholder="Mot de passe" id="mdp" required><br>
-            <input type="submit" name="connecter" value="Se connecter">
-        </div>
-    </form>
+  <form action="ConnexionAgriculteurbackend.blade.php" method="post">
+    <div class="wrapper">
+      <fieldset>
+        <center><h1>Connexion d'un Agriculteur</h1></center>
+        <label>Email:</label><br>
+        <input type="email" name="email" placeholder="Email" id="email" required><br>
+        <label>Mot de passe:</label><br>
+        <input type="password" name="mdp" placeholder="Mot de passe" id="mdp" required><br>
+        <input type="submit" name="connecter" value="Se connecter">
+      </fieldset>
+    </div>
+</form>
 </body>
 </html>

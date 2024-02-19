@@ -21,7 +21,6 @@ background-size: cover;
   border-radius:10%;
   height: fit-content;
   width:max-content;
-  background-color: green;
   background-position: center;
   font-size: medium;
   font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
@@ -35,7 +34,7 @@ input[type="text"]{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
     font-size: 25px;
 }
-input[type="password"]{
+input[type="password"],input[type="email"]{
     height:fit-content;
     width: fit-content;
     border-radius: 50px;
@@ -43,31 +42,43 @@ input[type="password"]{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
     font-size: 25px;
 }
-input[type="submit"]{
+button[type="submit"]{
   background-color:white;
   height:1cm;
   width:5cm;
   border-radius:20%;
 }
+fieldset{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius:10%;
+  height: fit-content;
+  width:max-content;
+  background-color: green;
+  border-color: greenyellow;
+}
 </style>
 <body>
-    <?php
-    require("Page d'acceuil PFA+inscription+connexion.blade.php");
-    ?>
-    <form action="Page d'acceuil PFA+inscription+connexion.blade.php" enctype="text/plain" method="POST">
+    <form action="inscriptionAgriculteurbackend.blade.php" method="post">
         <div class="wrapper">
-         <center><h1>Inscription d'un Agriculteur</h1><center>
-         <label>CIN:</label>
-         <input type="text" name="cin" placeholder="CIN" id="cin" required><br>
-         <label>Nom:</label>
-         <input type="text" name="nom" placeholder="Nom" id="nom" required><br>
-         <label>Prènom:</label>
-         <input type="text" name="prenom" placeholder="Prènom" id="prenom" required><br>
-         <label>Mot de passe:</label>
-         <input type="password" name="mdp" placeholder="Mot de passe" id="mdp" required><br>
-         <label>Email:</label>
-         <input type="text" name="email" placeholder="Email" id="email" required><br>
-         <input type="submit" name="inscrire" value="S'inscrire"><br>
+            <fieldset>
+                <center><h1>Inscription d'un agriculteur</h1></center>
+                <label>Cin:</label><br>
+                <input type="text" name="cin" placeholder="CIN"><br>
+                <label>Nom:</label><br>
+                <input type="text" name="nom" placeholder="Nom"><br>
+                <label>Prènom:</label><br>
+                <input type="text" name="prenom" placeholder="Prénom"><br>
+                <label>Mot de passe:</label><br>
+                <input type="password" name="mdp" placeholder="Mot de passe"><br>
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="Email"><br>
+                <label>Numéro de téléphone:</label><br>
+                <input type="text" name="numtel" placeholder="Numéro de téléphone"><br>
+                <center><button type="submit">S'inscrire</button></center>
+            </fieldset>
         </div>
     </form>
 </body>

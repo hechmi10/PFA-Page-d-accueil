@@ -47,7 +47,7 @@ body {
   font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
   font-style: normal;
 }
-input[type="submit"]{
+input[type="submit"],input[type="text"]{
   background-color:white;
   height:1cm;
   width:5cm;
@@ -250,7 +250,7 @@ header h2 {
 <body>
     <div class="wrapper">
         <center><h1>AgriConnect</h1></center>
-        <a href="inscriptionAgriculteur.blade.php">
+        <a href="InscriptionAgriculteur.blade.php">
             <input type="submit" value="Inscription">
         </a>
         <a href="ConnexionAgriculteur.blade.php">
@@ -268,6 +268,10 @@ header h2 {
         <a href="#">
             <input type="submit" value="A propos">
         </a>
+        <navbar>
+          <input type="text" placeholder="Rechercher">
+          <input type="submit" name="rechercher" value="rechercher">
+        </navbar>
     </div>
     <div class="sidebar">
         <a href="#">
@@ -286,7 +290,7 @@ header h2 {
         <ul class="chatbox">
           <li class="chat incoming">
             <span class="material-symbols-outlined">smart_toy</span>
-            <p>Hi there 👋<br>How can I help you today?</p>
+            <p>Bonjour 👋<br>Comment vous-je serve?</p>
           </li>
         </ul>
         <div class="chat-input">
@@ -298,16 +302,13 @@ header h2 {
         AgriConnect,@ Tous les droits sont réservés,2024
       </span>
 </body>
-<?php
-require("Page d'acceuil PFA+inscription+connexion.blade.php");
-?>
 <script>
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
-let userMessage = null;
+var userMessage = null;
 const API_KEY = "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";
 const inputInitHeight = chatInput.scrollHeight;
 const createChatLi = (message, className) => {
@@ -325,7 +326,7 @@ const generateResponse = (chatElement) => {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${API_KEY}`
+            "Authorization": `Bearer ${API_KEY}`,
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
@@ -342,7 +343,7 @@ const generateResponse = (chatElement) => {
 const handleChat = () => {
     userMessage = chatInput.value.trim();
     if(!userMessage) return;
-    chatInput.value = "";
+    chatInput.value = "Merci pour votre service";
     chatInput.style.height = `${inputInitHeight}px`;
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
     chatbox.scrollTo(0, chatbox.scrollHeight);
