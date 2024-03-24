@@ -1,31 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact</title>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>AgriConnect</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+  <!-- fonts awesome style -->
+  <link href="font-awesome.min.css" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,,600,700|Poppins:400,500,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="responsive.css" rel="stylesheet" />
 </head>
-<style>
-    body{
-        background-image:url("https://cdn.pixabay.com/photo/2015/02/21/17/11/hay-bales-644440_640.jpg");
-        background-repeat: no-repeat;
-        background-size:cover;
-        font-size:25px;
-        color:green;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
-    }
-</style>
-<body>
-    <center>
-        <h1>
-            Numéros de telephone:<br>
-            11223344<br>
-            55667788<br>
-            99001122<br>
-            33445566<br>
-            77889900<br>
-        </h1>
-    </center>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <div class="custom_menu-btn">
+          <button onclick="openNav()">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+        </div>
+        <div id="myNav" class="overlay">
+          <div class="menu_btn-style ">
+            <button onclick="closeNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <a class="active" href="PagedacceuilPFA.blade.php">
+                Acceuil
+            </a>
+            <a class="" href="marketplace.html">
+                Marketplace
+            </a>
+            <a class="" href="Gestiondesfermes.html">
+                Gestion des fermes
+            </a>
+            <a class="" href="InscriptionAgriculteur.blade.php">
+                Inscription
+            </a>
+            <a class="" href="ConnexionAgriculteur.blade.php">
+                Connexion
+            </a>
+            <a class="" href="jeudesimulation.html">
+              Jeu de simulation
+            </a>
+            <a class="" href="contact.blade.php">
+                Contact
+            </a>
+          </div>
+        </div>
+        <a class="navbar-brand" href="index.html">
+          <span>
+            AgriConnect
+          </span>
+        </a>
+        <div class="user_option">
+          <form class="form-inline">
+            <button class="btn  nav_search-btn" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+          <a href="">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding section_pl ">
+    <div class="container py_mobile_45">
+      <div class="heading_container">
+        <h2>Get <span>In Touch</span></h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <img src="choose-bg.jpg">
+            <form action="">
+              <div>
+                <input type="text" placeholder="Full Name " />
+              </div>
+              <div>
+                <input type="text" placeholder="Phone number" />
+              </div>
+              <div>
+                <input type="email" placeholder="Email" />
+              </div>
+              <div>
+                <input type="text" class="message-box" placeholder="Message" />
+              </div>
+              <div class="d-flex ">
+                <button>
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding section_pl">
+    <div class="container">
+      <div class="info_logo">
+        <a href="">
+          AgriConnect
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  Email : demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+                <a class="active" href="PagedacceuilPFA.blade.php">
+                    Acceuil
+                </a>
+                <a class="" href="marketplace.html">
+                    Marketplace
+                </a>
+                <a class="" href="Gestiondesfermes.html">
+                    Gestion des fermes
+                </a>
+                <a class="" href="InscriptionAgriculteur.blade.php">
+                    Inscription
+                </a>
+                <a class="" href="ConnexionAgriculteur.blade.php">
+                    Connexion
+                </a>
+                <a class="" href="jeudesimulation.html">
+                  Jeu de simulation
+                </a>
+                <a class="" href="contact.blade.php">
+                    Contact
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_detail">
+            <h4>
+              Products
+            </h4>
+            <p>
+              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h4>
+            Subscribe
+          </h4>
+          <form action="">
+            <input type="text" placeholder="Your Email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved. Design by
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
 </body>
+
 </html>
