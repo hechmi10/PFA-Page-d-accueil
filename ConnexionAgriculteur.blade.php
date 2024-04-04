@@ -59,6 +59,9 @@
                         <a class="" href="marketplace.html">
                             Marketplace
                         </a>
+                        <a class="" href="chatbotAgriculture.blade.php">
+                            Chatbot
+                        </a>
                         <a class="" href="Gestiondesfermes.html">
                             Gestion des fermes
                         </a>
@@ -76,7 +79,7 @@
                         </a>
                     </div>
                 </div>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="PagedacceuilPFA.blade.php">
                     <span>
                         AgriConnect
                     </span>
@@ -114,13 +117,6 @@
                                 required><br>
                             <input type="submit" name="connecter" value="Se connecter">
                         </form>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="map_container">
-                        <div class="map">
-                            <div id="googleMap"></div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -192,6 +188,9 @@
                             <a class="" href="marketplace.html">
                                 Marketplace
                             </a>
+                            <a class="" href="chatbotAgriculture.blade.php">
+                                Chatbot
+                            </a>
                             <a class="" href="Gestiondesfermes.html">
                                 Gestion des fermes
                             </a>
@@ -256,4 +255,3 @@
 </body>
 
 </html>
-
