@@ -51,11 +51,14 @@
             </button>
           </div>
           <div class="overlay-content">
-            <a class="active" href="PagedacceuilPFA.blade.php">
+            <a class="" href="PagedacceuilPFA.blade.php">
                 Acceuil
             </a>
             <a class="" href="marketplace.html">
                 Marketplace
+            </a>
+            <a class="" href="chatbotAgriculture.blade.php">
+              Chatbot
             </a>
             <a class="" href="Gestiondesfermes.html">
                 Gestion des fermes
@@ -74,7 +77,7 @@
             </a>
           </div>
         </div>
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="PagedacceuilPFA.blade.php">
           <span>
             AgriConnect
           </span>
@@ -119,7 +122,7 @@
                 <input type="text" class="message-box" placeholder="Message" />
               </div>
               <div class="d-flex ">
-                <button>
+                <button type="submit">
                   SEND
                 </button>
               </div>
@@ -197,27 +200,30 @@
               Links
             </h4>
             <div class="info_links">
-                <a class="active" href="PagedacceuilPFA.blade.php">
-                    Acceuil
-                </a>
-                <a class="" href="marketplace.html">
-                    Marketplace
-                </a>
-                <a class="" href="Gestiondesfermes.html">
-                    Gestion des fermes
-                </a>
-                <a class="" href="InscriptionAgriculteur.blade.php">
-                    Inscription
-                </a>
-                <a class="" href="ConnexionAgriculteur.blade.php">
-                    Connexion
-                </a>
-                <a class="" href="jeudesimulation.html">
-                  Jeu de simulation
-                </a>
-                <a class="" href="contact.blade.php">
-                    Contact
-                </a>
+              <a class="" href="PagedacceuilPFA.blade.php">
+                Acceuil
+            </a>
+            <a class="" href="marketplace.html">
+                Marketplace
+            </a>
+            <a class="" href="chatbotAgriculture.blade.php">
+              Chatbot
+            </a>
+            <a class="" href="Gestiondesfermes.html">
+                Gestion des fermes
+            </a>
+            <a class="" href="InscriptionAgriculteur.blade.php">
+                Inscription
+            </a>
+            <a class="" href="ConnexionAgriculteur.blade.php">
+                Connexion
+            </a>
+            <a class="" href="jeudesimulation.html">
+              Jeu de simulation
+            </a>
+            <a class="" href="contact.blade.php">
+                Contact
+            </a>
             </div>
           </div>
         </div>
