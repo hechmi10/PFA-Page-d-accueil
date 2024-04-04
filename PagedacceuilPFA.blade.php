@@ -70,6 +70,9 @@
                         <a class="" href="Marketplace.html">
                             Marketplace
                         </a>
+                        <a class="" href="chatbotAgriculture.blade.php">
+                            Chatbot
+                        </a>
                         <a class="" href="Gestiondesfermes.html">
                             Gestion des fermes
                         </a>
@@ -82,12 +85,12 @@
                         <a class="" href="jeudesimulation.html">
                             Jeu de simulation
                         </a>
-                        <a class="" href="contact.html">
+                        <a class="" href="contact.blade.php">
                             Contact
                         </a>
                     </div>
                 </div>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="PagedacceuilPFA.blade.php">
                     <span>
                         AgriConnect
                     </span>
@@ -130,14 +133,6 @@
                                             <a href="" class="btn-2">
                                                 Contactez-nous
                                             </a>
-                                            <div class="chat-container">
-                                                <div class="chat-box" id="chat-box"></div>
-                                                <input type="text" id="user-input" placeholder="Type a message...">
-                                                <button onclick="sendMessage()">
-                                                    <i class="fas fa-comment"></i> <!-- Font Awesome chat icon -->
-                                                </button>
-                                            </div>
-                                            <script src="script.js" defer></script>
                                         </div>
                                     </div>
                                 </div>
@@ -215,6 +210,9 @@
                             <a class="" href="Marketplace.html">
                                 Marketplace
                             </a>
+                             <a class="" href="chatbotAgriculture.blade.php">
+                                Chatbot
+                            </a>
                             <a class="" href="Gestiondesfermes.html">
                                 Gestion des fermes
                             </a>
@@ -272,7 +270,6 @@
         </div>
     </footer>
     <!-- footer section -->
-
     <script src="jquery-3.4.1.min.js"></script>
     <script src="bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
