@@ -59,6 +59,9 @@
                         <a class="" href="marketplace.html">
                             Marketplace
                         </a>
+                        <a class="" href="chatbotAgriculture.blade.php">
+                            Chatbot
+                        </a>
                         <a class="" href="Gestiondesfermes.html">
                             Gestion des fermes
                         </a>
@@ -69,14 +72,14 @@
                             Connexion
                         </a>
                         <a class="" href="jeudesimulation.html">
-                          Jeu de simulation
+                            Jeu de simulation
                         </a>
                         <a class="" href="contact.blade.php">
                             Contact
                         </a>
                     </div>
                 </div>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="PagedacceuilPFA.blade.php">
                     <span>
                         AgriConnect
                     </span>
@@ -100,39 +103,32 @@
 
     <section class="contact_section layout_padding section_pl ">
         <div class="container py_mobile_45">
-          <div class="heading_container">
-            <h2><span>Inscription</span></h2>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form_container">
-                <form action="inscriptionAgriculteurbackend.blade.php" method="post">
-                    <label>Cin:</label><br>
-                    <input type="text" id="cin" name="cin" placeholder="CIN"><br>
-                    <label>Nom:</label><br>
-                    <input type="text" id="nom" name="nom" placeholder="Nom"><br>
-                    <label>Prénom:</label><br>
-                    <input type="text" id="prenom" name="prenom" placeholder="Prénom"><br>
-                    <label>Mot de passe:</label><br>
-                    <input type="password" id="mdp" name="mdp" placeholder="Mot de passe"><br>
-                    <label>Email:</label><br>
-                    <input type="email" id="email" name="email" placeholder="Email"><br>
-                    <label>Numéro de téléphone:</label><br>
-                    <input type="text" id="numtel" name="numtel" placeholder="Numéro de téléphone"><br>
-                    <center><input type="submit" value="S'inscrire"></center>
-                </form>
-              </div>
+            <div class="heading_container">
+                <h2><span>Inscription</span></h2>
             </div>
-            <div class="col-md-6">
-              <div class="map_container">
-                <div class="map">
-                  <div id="googleMap"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form_container">
+                        <form action="inscriptionAgriculteurbackend.blade.php" method="post">
+                            <label>Cin:</label><br>
+                            <input type="text" id="cin" name="cin" placeholder="CIN"><br>
+                            <label>Nom:</label><br>
+                            <input type="text" id="nom" name="nom" placeholder="Nom"><br>
+                            <label>Prénom:</label><br>
+                            <input type="text" id="prenom" name="prenom" placeholder="Prénom"><br>
+                            <label>Mot de passe:</label><br>
+                            <input type="password" id="mdp" name="mdp" placeholder="Mot de passe"><br>
+                            <label>Email:</label><br>
+                            <input type="email" id="email" name="email" placeholder="Email"><br>
+                            <label>Numéro de téléphone:</label><br>
+                            <input type="text" id="numtel" name="numtel" placeholder="Numéro de téléphone"><br>
+                            <center><input type="submit" value="S'inscrire"></center>
+                        </form>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
     <!-- end blog section -->
 
@@ -199,6 +195,9 @@
                             <a class="" href="marketplace.html">
                                 Marketplace
                             </a>
+                            <a class="" href="chatbotAgriculture.blade.php">
+                                Chatbot
+                            </a>
                             <a class="" href="Gestiondesfermes.html">
                                 Gestion des fermes
                             </a>
@@ -209,7 +208,7 @@
                                 Connexion
                             </a>
                             <a class="" href="jeudesimulation.html">
-                              Jeu de simulation
+                                Jeu de simulation
                             </a>
                             <a class="" href="contact.blade.php">
                                 Contact
