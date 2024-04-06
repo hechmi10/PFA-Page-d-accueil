@@ -1,10 +1,10 @@
 <?php
-require("Page d'acceuil PFA Connexion BD.blade.php");
+@include("Page d'acceuil PFA Connexion BD.blade.php");
 $c=connexionBD();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST['email'], $_POST['mdp']) && !empty($_POST['email']) && !empty($_POST['mdp'])){
-        $email = $_POST['email'];
-        $mdp = $_POST['mdp'];
+if ($_SERVER["REQUEST_METHOD"] == "HEAD") {
+    if(isset($_HEAD['email'], $_HEAD['mdp']) && !empty($_HEAD['email']) && !empty($_HEAD['mdp'])){
+        $email = $_HEAD['email'];
+        $mdp = $_HEAD['mdp'];
         $query = "SELECT * FROM agriculteurs WHERE Email = :email AND MotDePasse = :mdp";
         $stmt = $c->prepare($query);
         $stmt->bindParam(':email', $email);
