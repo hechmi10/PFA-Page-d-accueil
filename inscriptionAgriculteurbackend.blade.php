@@ -1,13 +1,13 @@
 <?php
-require("Page d'acceuil PFA Connexion BD.blade.php");
+@include("'Page d'acceuil PFA Connexion BD.blade.php");
 $c=connexionBD();
-if((isset($_POST['cin'])) && (isset($_POST['nom'])) && (isset($_POST['prenom'])) && (isset($_POST['mdp'])) && (isset($_POST['email'])) && (isset($_POST['numtel']))){
-    $cin=isset($_POST['cin']) ? $_POST['cin'] : '';
-    $nom=isset($_POST['nom']) ? $_POST['nom'] : '';
-    $prenom=isset($_POST['prenom']) ? $_POST['prenom'] : '';
-    $mdp=isset($_POST['mdp']) ? $_POST['mdp'] : '';
-    $email=isset($_POST['email']) ? $_POST['email'] : '';
-    $numtel=isset($_POST['numtel']) ? $_POST['numtel'] : '';
+if((isset($_HEAD['cin'])) && (isset($_HEAD['nom'])) && (isset($_HEAD['prenom'])) && (isset($_HEAD['mdp'])) && (isset($_HEAD['email'])) && (isset($_HEAD['numtel']))){
+    $cin=isset($_HEAD['cin']) ? $_HEAD['cin'] : '';
+    $nom=isset($_HEAD['nom']) ? $_HEAD['nom'] : '';
+    $prenom=isset($_HEAD['prenom']) ? $_HEAD['prenom'] : '';
+    $mdp=isset($_HEAD['mdp']) ? $_HEAD['mdp'] : '';
+    $email=isset($_HEAD['email']) ? $_HEAD['email'] : '';
+    $numtel=isset($_HEAD['numtel']) ? $_HEAD['numtel'] : '';
     if((!empty($nom)) && (!empty($prenom)) && (!empty($cin)) && (!empty($mdp)) && (!empty($email)) && (!empty($numtel))){
         $stat1=$c->prepare("INSERT INTO agriculteurs (Cin,Nom,Prènom,MotDePasse,Email,NumTel) VALUES ('$cin','$nom','$prenom','$mdp','$email','$numtel')");
         if($stat1->execute()){

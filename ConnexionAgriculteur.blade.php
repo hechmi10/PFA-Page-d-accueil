@@ -15,21 +15,19 @@
     <title>AgriConnect</title>
 
     <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
-    <!-- fonts awesome style -->
-    <link href="font-awesome.min.css" rel="stylesheet" />
-    <!-- fonts style -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,,600,700|Poppins:400,500,700&display=swap"
-        rel="stylesheet" />
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
+<!-- fonts awesome style -->
+<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
+<!-- fonts style -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,,600,700|Poppins:400,500,700&display=swap" rel="stylesheet" />
 
-    <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="responsive.css" rel="stylesheet" />
+<!-- Custom styles for this template -->
+<link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+<!-- responsive style -->
+<link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
 </head>
 
 <body class="sub_page">
@@ -53,30 +51,33 @@
                         </button>
                     </div>
                     <div class="overlay-content">
-                        <a class="" href="PagedacceuilPFA.blade.php">
+                        <a class="" href="{{ route('home') }}">
                             Acceuil
                         </a>
-                        <a class="" href="marketplace.html">
+                        <a class="" href="{{ route('marketplace') }}">
                             Marketplace
                         </a>
-                        <a class="" href="Gestiondesfermes.html">
+                        <a class="" href="{{ route('chatbot') }}">
+                            Chatbot
+                        </a>
+                        <a class="" href="{{ route('farm_management') }}">
                             Gestion des fermes
                         </a>
-                        <a class="" href="InscriptionAgriculteur.blade.php">
+                        <a class="" href="{{ route('register_farmer') }}">
                             Inscription
                         </a>
-                        <a class="" href="ConnexionAgriculteur.blade.php">
+                        <a class="" href="{{ route('login_farmer') }}">
                             Connexion
                         </a>
-                        <a class="" href="jeudesimulation.html">
+                        <a class="" href="{{ asset('jeudesimulation') }}">
                             Jeu de simulation
                         </a>
-                        <a class="" href="contact.blade.php">
+                        <a class="" href="{{ route('contact') }}">
                             Contact
                         </a>
                     </div>
                 </div>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="PagedacceuilPFA.blade.php">
                     <span>
                         AgriConnect
                     </span>
@@ -106,7 +107,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form_container">
-                        <form action="ConnexionAgriculteurbackend.blade.php" method="post">
+                        <form action="{{route('connexionbackend')}}" method="head">
                             <label>Email:</label><br>
                             <input type="email" name="email" placeholder="Email" id="email" required><br>
                             <label>Mot de passe:</label><br>
@@ -114,13 +115,6 @@
                                 required><br>
                             <input type="submit" name="connecter" value="Se connecter">
                         </form>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="map_container">
-                        <div class="map">
-                            <div id="googleMap"></div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -186,25 +180,28 @@
                             Links
                         </h4>
                         <div class="info_links">
-                            <a class="" href="PagedacceuilPFA.blade.php">
+                            <a class="" href="{{ route('home') }}">
                                 Acceuil
                             </a>
-                            <a class="" href="marketplace.html">
+                            <a class="" href="{{ route('marketplace') }}">
                                 Marketplace
                             </a>
-                            <a class="" href="Gestiondesfermes.html">
+                            <a class="" href="{{ route('chatbot') }}">
+                                Chatbot
+                            </a>
+                            <a class="" href="{{ route('farm_management') }}">
                                 Gestion des fermes
                             </a>
-                            <a class="" href="InscriptionAgriculteur.blade.php">
+                            <a class="" href="{{ route('register_farmer') }}">
                                 Inscription
                             </a>
-                            <a class="" href="ConnexionAgriculteur.blade.php">
+                            <a class="" href="{{ route('login_farmer') }}">
                                 Connexion
                             </a>
-                            <a class="" href="jeudesimulation.html">
+                            <a class="" href="{{ route('jeudesimulation') }}">
                                 Jeu de simulation
                             </a>
-                            <a class="" href="contact.blade.php">
+                            <a class="" href="{{ route('contact') }}">
                                 Contact
                             </a>
                         </div>
@@ -248,12 +245,12 @@
     </footer>
     <!-- footer section -->
 
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="custom.js"></script>
+<script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+
 
 </body>
 
 </html>
-
