@@ -2,37 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
-    public function login()
+    public function login(Request $request)
     {
-        require("Page d'acceuil PFA Connexion BD.blade.php");
-        $c=connexionBD();
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if(isset($_POST['email'], $_POST['mdp']) && !empty($_POST['email']) && !empty($_POST['mdp'])){
-                $email = $_POST['email'];
-                $mdp = $_POST['mdp'];
-                $query = "SELECT * FROM agriculteurs WHERE Email = :email AND MotDePasse = :mdp";
-                $stmt = $c->prepare($query);
-                $stmt->bindParam(':email', $email);
-                $stmt->bindParam(':mdp', $mdp);
-                $stmt->execute();
-                if($stmt->rowCount() > 0){
-                    echo "Connexion réussie !";
-                } else {
-                    echo "Identifiants incorrects. Veuillez réessayer.";
-                }
-            } else {
-                echo "Veuillez remplir tous les champs.";
-            }
-            $d=deconnexionBD();
-        }
-        else{
-            echo "non valide,réessayer";
+        $email = $request->input('email');
+        $mdp = $request->input('mdp');
+        
+        $user = DB::table('agriculteurs')
+                    ->where('Email', $email)
+                    ->where('MotDePasse', $mdp)
+                    ->first();
+        
+        if ($user) {
+            return "Connexion réussie !";
+        } else {
+            return "Identifiants incorrects. Veuillez réessayer.";
         }
     }
 }
-?>

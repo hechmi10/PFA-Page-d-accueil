@@ -107,7 +107,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form_container">
-                        <form action="{{route('connexionbackend')}}" method="head">
+                        <form action="{{route('connexion_agriculteur')}}" method="post">
+                            @csrf
                             <label>Email:</label><br>
                             <input type="email" name="email" placeholder="Email" id="email" required><br>
                             <label>Mot de passe:</label><br>

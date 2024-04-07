@@ -77,7 +77,7 @@
           </a>
           </div>
         </div>
-        <a class="navbar-brand" href="PagedacceuilPFA.blade.php">
+        <a class="navbar-brand" href="{{route('home')}}">
           <span>
             AgriConnect
           </span>
@@ -200,28 +200,28 @@
               Links
             </h4>
             <div class="info_links">
-              <a class="" href="PagedacceuilPFA.blade.php">
+              <a class="" href="{{ route('home') }}">
                 Acceuil
             </a>
-            <a class="" href="marketplace.html">
+            <a class="" href="{{ route('marketplace') }}">
                 Marketplace
             </a>
-            <a class="" href="chatbotAgriculture.blade.php">
-              Chatbot
+            <a class="" href="{{ route('chatbot') }}">
+                Chatbot
             </a>
-            <a class="" href="Gestiondesfermes.html">
+            <a class="" href="{{ route('farm_management') }}">
                 Gestion des fermes
             </a>
-            <a class="" href="InscriptionAgriculteur.blade.php">
+            <a class="" href="{{ route('register_farmer') }}">
                 Inscription
             </a>
-            <a class="" href="ConnexionAgriculteur.blade.php">
+            <a class="" href="{{ route('login_farmer') }}">
                 Connexion
             </a>
-            <a class="" href="jeudesimulation.html">
-              Jeu de simulation
+            <a class="" href="{{ asset('jeudesimulation') }}">
+                Jeu de simulation
             </a>
-            <a class="" href="contact.blade.php">
+            <a class="" href="{{ route('contact') }}">
                 Contact
             </a>
             </div>

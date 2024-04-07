@@ -107,7 +107,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form_container">
-                        <form action="{{route('inscriptionAgriculteurbackend')}}" method="head">
+                        <form action="{{route('inscription_agriculteur')}}" method="post">
+                            @csrf
                             <label>Cin:</label><br>
                             <input type="text" id="cin" name="cin" placeholder="CIN"><br>
                             <label>Nom:</label><br>
