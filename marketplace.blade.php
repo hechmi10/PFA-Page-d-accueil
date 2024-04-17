@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>AgriConnect</title>
+  <title>Fallah Connect</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
@@ -58,9 +58,6 @@
             <a class="" href="{{ route('marketplace') }}">
                 Marketplace
             </a>
-            <a class="" href="{{ route('chatbot') }}">
-                Chatbot
-            </a>
             <a class="" href="{{ route('farm_management') }}">
                 Gestion des fermes
             </a>
@@ -78,21 +75,21 @@
             </a>
           </div>
         </div>
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{route('home')}}">
           <span>
-            AgriConnect
+            Fallah Connect
           </span>
         </a>
         <div class="user_option">
           <form class="form-inline">
-            <button class="btn  nav_search-btn" type="submit">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
+              <button class="btn  nav_search-btn" type="submit">
+                  <button type="submit">Rech</button>
+              </button>
           </form>
-          <a href="">
-            <i class="fa fa-user" aria-hidden="true"></i>
+          <a href="{{route('Profile')}}">
+              <button type="submit">Profil</button>
           </a>
-        </div>
+      </div>
       </nav>
     </header>
     <!-- end header section -->
@@ -177,7 +174,7 @@
     <div class="container">
       <div class="info_logo">
         <a href="">
-          AgriConnect
+          Fallah Connect
         </a>
       </div>
       <div class="row">
@@ -207,20 +204,6 @@
               </a>
             </div>
           </div>
-          <div class="info_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
         </div>
         <div class="col-md-3">
           <div class="info_link_box">
@@ -233,9 +216,6 @@
                 </a>
                 <a class="" href="{{ route('marketplace') }}">
                     Marketplace
-                </a>
-                <a class="" href="{{ route('chatbot') }}">
-                    Chatbot
                 </a>
                 <a class="" href="{{ route('farm_management') }}">
                     Gestion des fermes
