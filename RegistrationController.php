@@ -18,7 +18,7 @@ class RegistrationController extends Controller
 
         if (!empty($cin) && !empty($nom) && !empty($prenom) && !empty($mdp) && !empty($email) && !empty($numtel)) {
             try {
-                DB::table('agriculteurs')->insert([
+                DB::table('agriculteurs inscription')->insert([
                     'Cin' => $cin,
                     'Nom' => $nom,
                     'Prènom' => $prenom,

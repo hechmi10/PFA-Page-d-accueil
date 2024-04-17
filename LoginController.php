@@ -12,15 +12,19 @@ class LoginController extends Controller
         $email = $request->input('email');
         $mdp = $request->input('mdp');
         
-        $user = DB::table('agriculteurs')
-                    ->where('Email', $email)
-                    ->where('MotDePasse', $mdp)
-                    ->first();
-        
-        if ($user) {
-            return "Connexion réussie !";
+        if (!empty($mdp) && !empty($email)) {
+            try {
+                DB::table('agriculteurs')->select([
+                    'MotDePasse' => $mdp,
+                    'Email' => $email
+                ]);
+
+                return redirect('/profile')->with("Connexion réussie");
+            } catch (\Exception $e) {
+                return "Connexion échouée, veuillez réessayer";
+            }
         } else {
-            return "Identifiants incorrects. Veuillez réessayer.";
+            return "Les champs sont obligatoires!";
         }
     }
 }
