@@ -1,0 +1,89 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+    "side header"
+    "side main";
+}
+
+.header{
+    background-color: #fff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#02231a;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+
+    grid-area: header;
+
+}
+.sidebar{
+    background-color: #033527;
+
+    grid-area: side;
+}
+.main{
+    background-color: #c5c5ca;
+    padding: 20px;
+
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "c1 c4 c3"
+    "c2 c2 c5"
+    "c2 c2 c6";
+    gap: 20px;
+}
+.card{
+    background-color: #f6f7f9;
+    border-radius: 10px;
+    font-weight: bold;
+    color:#02231a
+
+
+}
+.card:nth-child(1){
+    grid-area: c1;
+}
+.card:nth-child(2){
+    grid-area: c2;
+}
+.card:nth-child(3){
+    grid-area: c3;
+}
+.card:nth-child(4){
+    grid-area: c4;
+}
+.card:nth-child(5){
+    grid-area: c5;
+}
+.card:nth-child(6){
+    grid-area: c6;
+}
+#totalprix{
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    font-size: 49px;
+}
+#totalProduct{
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(54, 70, 42, 0.5);
+    font-size: 42px;
+}
+#netpayment{
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    font-size: 32px;
+}
+#gain{
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    font-size: 40px;
+}

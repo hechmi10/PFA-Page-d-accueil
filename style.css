@@ -383,6 +383,7 @@ a:focus {
   height: 35px;
   padding: 0;
   border: none;
+  border-radius: 70%;
   background-position: center;
   color: #ffffff;
   margin: 25px 0;
@@ -438,7 +439,7 @@ a:focus {
   right: 0;
   width: 100%;
   height: 100%;
-  background-image: url(slider-bg.jpg);
+  background-image: url("slider-bg.jpg");
   background-size: cover;
   -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
           clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
@@ -592,8 +593,7 @@ a:focus {
 }
 
 .wedo_section .box .img-box img {
-  width: 20px;
-  height:20px;
+  width: 100%;
 }
 
 .wedo_section .box .detail-box {
@@ -685,7 +685,7 @@ a:focus {
   right: 0;
   width: 95%;
   height: 100%;
-  background-image: url(choose-bg.jpg);
+  background-image: url("choose-bg.jpg");
   background-size: cover;
   -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
           clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
@@ -948,6 +948,25 @@ a:focus {
   color: #000000;
 }
 
+.contact_section button {
+  border: none;
+  display: inline-block;
+  background-color: #e6e804;
+  color: #000000;
+  padding: 12px 35px;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  font-size: 15px;
+  margin-top: 15px;
+  font-weight: 600;
+  width: auto; /* Ajout de la propriété */
+  padding-left: 15px; /* Ajout de la propriété */
+  padding-right: 15px; /* Ajout de la propriété */
+}
+Bourguiba
+Bourguiba Mootez
 .contact_section {
   position: relative;
 }
@@ -959,7 +978,7 @@ a:focus {
   right: 0;
   width: 95%;
   height: 100%;
-  background-image: url(choose-bg.jpg);
+  background-image: url("../css/choose-bg.jpg");
   background-size: cover;
   -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
           clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
@@ -989,7 +1008,16 @@ a:focus {
   outline: none;
   color: #000000;
 }
+.contact_section .form_container label {
+  color: #ffffff;
+}
 
+.contact_section .form_container input[type="text"],
+.contact_section .form_container input[type="date"],
+.contact_section .form_container select,
+.contact_section .form_container textarea {
+  color: #000000;
+}
 .contact_section input::-webkit-input-placeholder {
   color: #4c4c4c;
 }
@@ -1009,7 +1037,6 @@ a:focus {
 .contact_section input.message-box {
   height: 120px;
 }
-
 .contact_section button {
   border: none;
   display: inline-block;
@@ -1058,7 +1085,7 @@ a:focus {
 }
 
 .client_section {
-  background-image: url(../images/client-bg.jpg);
+  background-image: url(client-bg.jpg);
   background-size: cover;
   position: relative;
 }
@@ -1181,7 +1208,7 @@ a:focus {
   right: 0;
   width: 95%;
   height: 100%;
-  background-image: url(../images/info-bg.jpg);
+  background-image: url("info-bg.jpg");
   background-size: cover;
   -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
           clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
@@ -1370,7 +1397,8 @@ a:focus {
   height: 300px;
   overflow-y: scroll;
   border: 1px solid #ccc;
-  padding: 100px;
+  padding: 10px;
+  color:white;
 }
 
 #user-input {
@@ -1380,6 +1408,9 @@ a:focus {
 
 button {
   width: 60px;
+}
+label{
+  color:white;
 }
 
 /*# sourceMappingURL=style.css.map */

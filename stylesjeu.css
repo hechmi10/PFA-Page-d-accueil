@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background:url(../images1/img3.jpg.jpg);
+    margin: 0;
+    padding: 10%;
+}
+
+#farm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #02231a; /* Couleur de fond */
+    padding: 10px 0; /* Espacement intérieur */
+    text-align: center; /* Centrage horizontal */
+    z-index: 999;
+}
+.title1{
+    position: fixed;
+    text-align: center;
+    background-color: #02231a;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0; /* Espacement intérieur */
+    text-align: center; /* Centrage horizontal */
+    z-index: 999;
+
+}
+
+h1 {
+    text-align: center;
+    color: #3e8914;
+}
+
+#actions,
+#status {
+    margin-bottom: 20px;
+}
+
+#actions,
+#status {
+    padding: 20px;
+
+    border-radius: 8px;
+}
+
+#actions h2,
+#status h2 {
+    margin-top: 0;
+    color: #3e8914;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    position: absolute;
+    top: 40%; /* Centrage vertical */
+    left: 50%; /* Centrage horizontal */
+    transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+    width: 400px; /* Largeur de la forme */
+    height: 300px;
+    padding: 20px; /* Ajoute un espace interne de 20 pixels autour du formulaire */
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    color: #3e8914;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3e8914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2d6d0b;
+}
+
+#resultList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resultList li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#resultList li:last-child {
+    margin-bottom: 0;
+}
+
