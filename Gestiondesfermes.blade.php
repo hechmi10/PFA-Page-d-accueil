@@ -57,9 +57,6 @@
           <a class="" href="{{ route('marketplace') }}">
               Marketplace
           </a>
-          <a class="" href="{{ route('chatbot') }}">
-              Chatbot
-          </a>
           <a class="" href="{{ route('farm_management') }}">
               Gestion des fermes
           </a>
@@ -79,19 +76,19 @@
         </div>
         <a class="navbar-brand" href="{{route('home')}}">
           <span>
-            AgriConnect
+            Fallah Connect
           </span>
         </a>
         <div class="user_option">
           <form class="form-inline">
-            <button class="btn  nav_search-btn" type="submit">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
+              <button class="btn  nav_search-btn" type="submit">
+                  <button type="submit">Rech</button>
+              </button>
           </form>
-          <a href="">
-            <i class="fa fa-user" aria-hidden="true"></i>
+          <a href="{{route('Profile')}}">
+              <button type="submit">Profil</button>
           </a>
-        </div>
+      </div>
       </nav>
     </header>
     <!-- end header section -->
@@ -137,7 +134,7 @@
             </div>
         </div>
         <div class="btn-box">
-            <a href="suiviculture.html">Formulaire</a>
+            <a href="{{route('culture')}}">Formulaire</a>
         </div>
     </div>
 </div>
@@ -155,7 +152,7 @@
             </div>
         </div>
         <div class="btn-box">
-            <a href="gestionstock.html">Formulaire</a>
+            <a href="{{route('stock')}}">Formulaire</a>
         </div>
     </div>
 </div>
@@ -251,7 +248,7 @@
             </div>
         </div>
         <div class="btn-box">
-            <a href="planificationrecolte.html">Formulaire</a>
+            <a href="{{route('recolte')}}">Formulaire</a>
         </div>
     </div>
 </div>
@@ -267,7 +264,7 @@
     <div class="container">
         <div class="info_logo">
             <a href="">
-                AgriConnect
+              Fallah Connect
             </a>
         </div>
         <div class="row">
@@ -278,38 +275,21 @@
                     </h4>
                     <div class="contact_link_box">
                         <a href="">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <span>
                                 Location
                             </span>
                         </a>
                         <a href="">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
                             <span>
                                 Contactez-nous +01 1234567890
                             </span>
                         </a>
                         <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
                             <span>
                                 Email : demo@gmail.com
                             </span>
                         </a>
                     </div>
-                </div>
-                <div class="info_social">
-                    <a href="">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
                 </div>
             </div>
             <div class="col-md-3">
@@ -323,9 +303,6 @@
                     </a>
                     <a class="" href="{{ route('marketplace') }}">
                         Marketplace
-                    </a>
-                    <a class="" href="{{ route('chatbot') }}">
-                        Chatbot
                     </a>
                     <a class="" href="{{ route('farm_management') }}">
                         Gestion des fermes

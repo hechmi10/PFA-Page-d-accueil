@@ -12,13 +12,14 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Fallah Connect</title>
+  <title>AgriConnect</title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-<!-- bootstrap core css -->
-<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
 <!-- fonts awesome style -->
 <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
 <!-- fonts style -->
@@ -52,34 +53,34 @@
           </div>
           <div class="overlay-content">
             <a class="" href="{{ route('home') }}">
-              Acceuil
-          </a>
-          <a class="" href="{{ route('marketplace') }}">
-              Marketplace
-          </a>
-          <a class="" href="{{ route('chatbot') }}">
-              Chatbot
-          </a>
-          <a class="" href="{{ route('farm_management') }}">
-              Gestion des fermes
-          </a>
-          <a class="" href="{{ route('register_farmer') }}">
-              Inscription
-          </a>
-          <a class="" href="{{ route('login_farmer') }}">
-              Connexion
-          </a>
-          <a class="" href="{{ asset('jeudesimulation.html') }}">
-              Jeu de simulation
-          </a>
-          <a class="" href="{{ route('contact') }}">
-              Contact
-          </a>
+                Acceuil
+            </a>
+            <a class="" href="{{ route('marketplace') }}">
+                Marketplace
+            </a>
+            <a class="" href="{{ route('chatbot') }}">
+                Chatbot
+            </a>
+            <a class="" href="{{ route('farm_management') }}">
+                Gestion des fermes
+            </a>
+            <a class="" href="{{ route('register_farmer') }}">
+                Inscription
+            </a>
+            <a class="" href="{{ route('login_farmer') }}">
+                Connexion
+            </a>
+            <a class="" href="{{ asset('jeudesimulation.html') }}">
+                Jeu de simulation
+            </a>
+            <a class="" href="{{ route('contact') }}">
+                Contact
+            </a>
           </div>
         </div>
-        <a class="navbar-brand" href="{{route('home')}}">
+        <a class="navbar-brand" href="index.html">
           <span>
-            Fallah Connect
+            AgriConnect
           </span>
         </a>
         <div class="user_option">
@@ -97,41 +98,70 @@
     <!-- end header section -->
   </div>
 
-  <!-- contact section -->
+  <!-- we do section -->
 
-  <section class="contact_section layout_padding section_pl ">
-    <div class="container py_mobile_45">
+  <section class="wedo_section layout_padding section_pr">
+    <div class="container">
       <div class="heading_container">
-        <h2>Get <span>In Touch</span></h2>
+        <h2><span>What</span> We do</h2>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container">
-            <form action="{{route('home')}}">
-              @csrf
-              <div>
-                <input type="text" placeholder="Full Name " />
+      <div class="carousel-wrap ">
+        <div class="owl-carousel wedo_owl_carousel">
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/wedo-img1.jpg" alt="" />
               </div>
-              <div>
-                <input type="text" placeholder="Phone number" />
+              <div class="detail-box">
+                <h5>
+                  Growing Fruits and Vegetables
+                </h5>
+                <p>
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                </p>
+                <a href="">
+                  Read More
+                </a>
               </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="d-flex ">
-                <input type="submit" value="Send">
-                  
-              </div>
-            </form>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
+          <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/wedo-img2.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Caring & Planting
+                </h5>
+                <p>
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/wedo-img3.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Spring & Fall Cleanup
+                </h5>
+                <p>
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -139,8 +169,7 @@
     </div>
   </section>
 
-  <!-- end contact section -->
-
+  <!-- end we do section -->
 
   <!-- info section -->
 
@@ -148,7 +177,7 @@
     <div class="container">
       <div class="info_logo">
         <a href="">
-          Fallah Connect
+          AgriConnect
         </a>
       </div>
       <div class="row">
@@ -199,28 +228,30 @@
               Links
             </h4>
             <div class="info_links">
-              <a class="active" href="{{ route('home') }}">
-              Acceuil
-            </a>
-            <a class="" href="{{ route('marketplace') }}">
-              Marketplace
-            </a>
-            
-            <a class="" href="{{ route('farm_management') }}">
-              Gestion des fermes
-            </a>
-            <a class="" href="{{ route('register_farmer') }}">
-              Inscription
-            </a>
-            <a class="" href="{{ route('login_farmer') }}">
-              Connexion
-            </a>
-            <a class="" href="{{ route('jeudesimulation') }}">
-              Jeu de simulation
-            </a>
-            <a class="" href="{{ route('contact') }}">
-              Contact
-            </a>
+                <a class="" href="{{ route('home') }}">
+                    Acceuil
+                </a>
+                <a class="" href="{{ route('marketplace') }}">
+                    Marketplace
+                </a>
+                <a class="" href="{{ route('chatbot') }}">
+                    Chatbot
+                </a>
+                <a class="" href="{{ route('farm_management') }}">
+                    Gestion des fermes
+                </a>
+                <a class="" href="{{ route('register_farmer') }}">
+                    Inscription
+                </a>
+                <a class="" href="{{ route('login_farmer') }}">
+                    Connexion
+                </a>
+                <a class="" href="{{ asset('jeudesimulation.html') }}">
+                    Jeu de simulation
+                </a>
+                <a class="" href="{{ route('contact') }}">
+                    Contact
+                </a>
             </div>
           </div>
         </div>
@@ -230,7 +261,8 @@
               Products
             </h4>
             <p>
-              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin
+              words, combined with a handful
             </p>
           </div>
         </div>
@@ -251,7 +283,6 @@
 
   <!-- end info section -->
 
-
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
@@ -264,13 +295,9 @@
   <!-- footer section -->
 
   <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script src="{{ asset('js/custom.js') }}"></script>
-
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
+  <script src="{{ asset('js/bootstrap.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="{{ asset('js/custom.js') }}"></script>
 
 </body>
 

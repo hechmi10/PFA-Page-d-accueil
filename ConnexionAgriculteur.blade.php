@@ -57,9 +57,6 @@
                         <a class="" href="{{ route('marketplace') }}">
                             Marketplace
                         </a>
-                        <a class="" href="{{ route('chatbot') }}">
-                            Chatbot
-                        </a>
                         <a class="" href="{{ route('farm_management') }}">
                             Gestion des fermes
                         </a>
@@ -77,21 +74,21 @@
                         </a>
                     </div>
                 </div>
-                <a class="navbar-brand" href="PagedacceuilPFA.blade.php">
+                <a class="navbar-brand" href="{{route('home')}}">
                     <span>
-                        AgriConnect
+                      Fallah Connect
                     </span>
                 </a>
                 <div class="user_option">
-                    <form class="form-inline">
-                        <button class="btn  nav_search-btn" type="submit">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </form>
-                    <a href="">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </a>
-                </div>
+                  <form class="form-inline">
+                      <button class="btn  nav_search-btn" type="submit">
+                        <button type="submit">Rech</button>
+                      </button>
+                  </form>
+                  <a href="{{route('Profile')}}">
+                      <button type="submit">Profil</button>
+                  </a>
+              </div>
             </nav>
         </header>
         <!-- end header section -->
@@ -128,110 +125,94 @@
 
     <section class="info_section layout_padding section_pl">
         <div class="container">
-            <div class="info_logo">
-                <a href="">
-                    AgriConnect
+          <div class="info_logo">
+            <a href="">
+              Fallah Connect
+            </a>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="info_contact">
+                <h4>
+                  Address
+                </h4>
+                <div class="contact_link_box">
+                  <a href="">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      Location
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                      Call +01 1234567890
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                      Email : demo@gmail.com
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="info_link_box">
+                <h4>
+                  Links
+                </h4>
+                <div class="info_links">
+                  <a class="" href="{{ route('home') }}">
+                    Acceuil
                 </a>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="info_contact">
-                        <h4>
-                            Adresse
-                        </h4>
-                        <div class="contact_link_box">
-                            <a href="">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <span>
-                                    Location
-                                </span>
-                            </a>
-                            <a href="">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <span>
-                                    Call +01 1234567890
-                                </span>
-                            </a>
-                            <a href="">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <span>
-                                    Email : demo@gmail.com
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="info_social">
-                        <a href="">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                <a class="" href="{{ route('marketplace') }}">
+                    Marketplace
+                </a>
+                <a class="" href="{{ route('farm_management') }}">
+                    Gestion des fermes
+                </a>
+                <a class="" href="{{ route('register_farmer') }}">
+                    Inscription
+                </a>
+                <a class="" href="{{ route('login_farmer') }}">
+                    Connexion
+                </a>
+                <a class="" href="{{ asset('jeudesimulation') }}">
+                    Jeu de simulation
+                </a>
+                <a class="" href="{{ route('contact') }}">
+                    Contact
+                </a>
                 </div>
-                <div class="col-md-3">
-                    <div class="info_link_box">
-                        <h4>
-                            Links
-                        </h4>
-                        <div class="info_links">
-                            <a class="" href="{{ route('home') }}">
-                                Acceuil
-                            </a>
-                            <a class="" href="{{ route('marketplace') }}">
-                                Marketplace
-                            </a>
-                            <a class="" href="{{ route('chatbot') }}">
-                                Chatbot
-                            </a>
-                            <a class="" href="{{ route('farm_management') }}">
-                                Gestion des fermes
-                            </a>
-                            <a class="" href="{{ route('register_farmer') }}">
-                                Inscription
-                            </a>
-                            <a class="" href="{{ route('login_farmer') }}">
-                                Connexion
-                            </a>
-                            <a class="" href="{{ route('jeudesimulation') }}">
-                                Jeu de simulation
-                            </a>
-                            <a class="" href="{{ route('contact') }}">
-                                Contact
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="info_detail">
-                            <h4>
-                                Produits
-                            </h4>
-                            <p>
-                                necessary, making this the first true generator on the Internet. It uses a dictionary of
-                                over 200 Latin words, combined with a handful
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>
-                            Subscribe
-                        </h4>
-                        <form action="">
-                            <input type="text" placeholder="Your Email" />
-                            <button type="submit">
-                                Subscribe
-                            </button>
-                        </form>
-                    </div>
-                </div>
+              </div>
             </div>
-    </section>
+            <div class="col-md-3">
+              <div class="info_detail">
+                <h4>
+                  Products
+                </h4>
+                <p>
+                  necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h4>
+                Subscribe
+              </h4>
+              <form action="">
+                <input type="text" placeholder="Your Email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    
 
     <!-- end info section -->
 

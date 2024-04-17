@@ -14,27 +14,25 @@
 
     <title>Fallah Connect</title>
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-<!-- bootstrap core css -->
-<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
-<!-- fonts awesome style -->
-<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
-<!-- fonts style -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,,600,700|Poppins:400,500,700&display=swap" rel="stylesheet" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
+    <!-- fonts awesome style -->
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,,600,700|Poppins:400,500,700&display=swap"
+        rel="stylesheet" />
 
-<!-- Custom styles for this template -->
-<link href="{{ asset('css/style.css') }}" rel="stylesheet" />
-<!-- responsive style -->
-<link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
-<!-- Google Fonts Link For Icons -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-dGGveJcYKRuT2TZ7o1hqJXcPv9A5paq+Cy6+3wW3PAMnImDfnPj3kkwJ90xYwV0L" crossorigin="anonymous">
-
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
 </head>
 
-<body>
+<body class="sub_page">
     <div class="hero_area">
         <!-- header section strats -->
         <header class="header_section">
@@ -55,7 +53,7 @@
                         </button>
                     </div>
                     <div class="overlay-content">
-                        <a class="" href="{{ route('home') }}">
+                        <a class="active" href="{{ route('home') }}">
                             Acceuil
                         </a>
                         <a class="" href="{{ route('marketplace') }}">
@@ -70,15 +68,15 @@
                         <a class="" href="{{ route('login_farmer') }}">
                             Connexion
                         </a>
-                        <a class="" href="{{ asset('jeudesimulation') }}">
-                            Simulation
+                        <a class="" href="{{ route('jeudesimulation') }}">
+                            Jeu de simulation
                         </a>
                         <a class="" href="{{ route('contact') }}">
                             Contact
                         </a>
                     </div>
                 </div>
-                <a class="navbar-brand" href="{{route('home')}}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <span>
                         Fallah Connect
                     </span>
@@ -89,55 +87,78 @@
                             <button type="submit">Rech</button>
                         </button>
                     </form>
-                    <a href="{{route('Profile')}}">
+                    <a href="{{ route('Profile') }}">
                         <button type="submit">Profil</button>
                     </a>
                 </div>
             </nav>
         </header>
         <!-- end header section -->
-        <!-- slider section -->
-        <section class="slider_section position-relative">
-            <a class="navbar-brand" href="{{ route('home') }}">
-                <span>
-                    Fallah Connect
-                </span>
-            </a>
-            <div class="box">
-                <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-lg-10 ml-auto">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Agriculture <br />
-                                            et Gestion des Fermes
-                                        </h1>
-                                        <div class="btn-box">
-                                            <a href="{{route('contact')}}" class="btn-2">
-                                                Contactez-nous
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <!-- end slider section -->
     </div>
 
+    <section class="contact_section layout_padding section_pl ">
+        <div class="container py_mobile_45">
+            <div class="heading_container">
+                <h2><span>Remplissez le formulaire suivant pour enregistrer les détails de stocks :</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form_container">
+                        <form action="{{ route('submit_stock') }}" method="POST">
+                            @csrf
 
-    <!-- end client section -->
+                            <label for="product_name">Nom du produit:</label><br>
+                            <input type="text" id="product_name" name="product_name" required
+                                placeholder="Nom du produit">
+                            @error('product_name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            <br><br>
 
-    <!-- info section -->
+                            <label for="quantity">Quantité:</label><br>
+                            <input type="number" id="quantity" name="quantity" required placeholder="Quantité">
+                            @error('quantity')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            <br><br>
+
+                            <label for="purchase_date">Date d'achat:</label><br>
+                            <input type="date" id="purchase_date" name="purchase_date" required
+                                placeholder="Date d'achat">
+                            @error('purchase_date')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            <br><br>
+
+                            <label for="supplier">Fournisseur:</label><br>
+                            <input type="text" id="supplier" name="supplier" placeholder="Fournisseur">
+                            @error('supplier')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            <br><br>
+
+                            <button type="submit">Enregistrer</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
 
     <section class="info_section layout_padding section_pl">
         <div class="container">
             <div class="info_logo">
-                <a href="">
+                <a href="#">
                     Fallah Connect
                 </a>
             </div>
@@ -148,17 +169,20 @@
                             Adresse
                         </h4>
                         <div class="contact_link_box">
-                            <a href="">
+                            <a href="#">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <span>
                                     Location
                                 </span>
                             </a>
-                            <a href="">
+                            <a href="#">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
                                     Contactez-nous +01 1234567890
                                 </span>
                             </a>
-                            <a href="">
+                            <a href="#">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
                                     Email : demo@gmail.com
                                 </span>
@@ -172,7 +196,7 @@
                             Links
                         </h4>
                         <div class="info_links">
-                            <a class="" href="{{ route('home') }}">
+                            <a class="active" href="{{ route('home') }}">
                                 Acceuil
                             </a>
                             <a class="" href="{{ route('marketplace') }}">
@@ -235,11 +259,11 @@
         </div>
     </footer>
     <!-- footer section -->
-    <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script src="{{ asset('js/custom.js') }}"></script>
 
+    <script src="{{ asset('js\jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('js\bootstrap.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{{ asset('js\custom.js') }}"></script>
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
     </script>
