@@ -66,7 +66,7 @@
                         <a class="" href="{{ route('login_farmer') }}">
                             Connexion
                         </a>
-                        <a class="" href="{{ asset('jeudesimulation.html') }}">
+                        <a class="" href="{{ route('jeudesimulation') }}">
                             Jeu de simulation
                         </a>
                         <a class="" href="{{ route('contact') }}">
@@ -118,7 +118,7 @@
                             <input type="email" id="email" name="email" placeholder="Email"><br>
                             <label>Numéro de téléphone:</label><br>
                             <input type="text" id="numtel" name="numtel" placeholder="Numéro de téléphone"><br>
-                            <center><input type="submit" value="S'inscrire"></center>
+                            <button type="submit">S'inscrire</button>
                         </form>
                     </div>
                 </div>

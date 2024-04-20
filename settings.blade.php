@@ -1,3 +1,8 @@
+<?php
+use App\Models\Agriculteur;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LoginController;
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -8,7 +13,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+      <title>Fallah Connect</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -49,11 +54,11 @@
                   <div class="sidebar_user_info">
                      <div class="icon_setting"></div>
                      <div class="user_profle_side">
-                        <div class="user_img"><img class="img-responsive" src="{{asset('images/layout_img/Moi.jpg')}}" alt="#" /></div>
+                        <div class="user_img"><img class="img-responsive" src="{{asset('images/layout_img/hechmi.jpg')}}" alt="#" /></div>
                         <div class="user_info">
-                           <h6>Ghassen Belgacem</h6>
-                           <p><span class="online_animation"></span> Online</p>
-                        </div>
+                           <h6>{{ $agriculteur->Nom }} {{ $agriculteur->Prènom }}</h6>
+                           <p><span class="online_animation"></span> En ligne</p>
+                       </div>
                      </div>
                   </div>
                </div>
@@ -139,7 +144,7 @@
                               </ul>
                               <ul class="user_profile_dd">
                                  <li>
-                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images/layout_img/Moi.jpg')}}" alt="#" /><span class="name_user">Ghassen Belgacem</span></a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images/layout_img/hechmi.jpg')}}" alt="#" /><span class="name_user">{{$agriculteur->Nom}} {{$agriculteur->Prènom}}</span></a>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="{{route('Profile')}}">Mon Profile</a>
                                         <a class="dropdown-item" href="{{route('settings')}}">Message</a>
@@ -190,9 +195,9 @@
                                                    </span>
                                                 </li>
                                                 <li>
-                                                   <span><img src="{{asset('images/layout_img/hechmi.jpg')}}" class="img-responsive" alt="#"></span>
+                                                   <span><img src="{{asset('images/layout_img/Moi.jpg')}}" class="img-responsive" alt="#"></span>
                                                    <span>
-                                                   <span class="name_user">Hechmi Jaideni</span>
+                                                   <span class="name_user">Ghassen Belgacem</span>
                                                    <span class="msg_user"><a href="{{route('Message')}}">Sed ut perspiciatis unde omnis.</a></span>
                                                    <span class="time_ago">12 min ago</span>
                                                    </span>
@@ -200,7 +205,7 @@
                                                 <li>
                                                    <span><img src="{{asset('images/layout_img/msg3.png')}}" class="img-responsive" alt="#"></span>
                                                    <span>
-                                                   <span class="name_user">Mootaz Bourguiba</span>
+                                                   <span class="name_user">Mootez Bourguiba</span>
                                                    <span class="msg_user"><a href="{{route('Message')}}">On the other hand, we denounce.</a></span>
                                                    <span class="time_ago">12 min ago</span>
                                                    </span>

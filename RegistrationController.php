@@ -15,6 +15,7 @@ class RegistrationController extends Controller
         $mdp = $request->input('mdp');
         $email = $request->input('email');
         $numtel = $request->input('numtel');
+        
 
         if (!empty($cin) && !empty($nom) && !empty($prenom) && !empty($mdp) && !empty($email) && !empty($numtel)) {
             try {
@@ -27,7 +28,7 @@ class RegistrationController extends Controller
                     'NumTel' => $numtel
                 ]);
 
-                return "Inscription réussie";
+                return redirect("/profile")->with("Inscription réussie");
             } catch (\Exception $e) {
                 return "Inscription échouée, veuillez réessayer";
             }

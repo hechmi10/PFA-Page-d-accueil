@@ -66,7 +66,7 @@
                         <a class="" href="{{ route('login_farmer') }}">
                             Connexion
                         </a>
-                        <a class="" href="{{ asset('jeudesimulation') }}">
+                        <a class="" href="{{ route('jeudesimulation') }}">
                             Jeu de simulation
                         </a>
                         <a class="" href="{{ route('contact') }}">
@@ -104,14 +104,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form_container">
-                        <form action="{{route('connexion_agriculteur')}}" method="post">
+                        <form action="{{route('Profile')}}" method="post">
                             @csrf
                             <label>Email:</label><br>
                             <input type="email" name="email" placeholder="Email" id="email" required><br>
                             <label>Mot de passe:</label><br>
                             <input type="password" name="mdp" placeholder="Mot de passe" id="mdp"
                                 required><br>
-                            <input type="submit" name="connecter" value="Se connecter">
+                            <button type="submit" name="connecter" >Se connecter</button>
                         </form>
                     </div>
                 </div>

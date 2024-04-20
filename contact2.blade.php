@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+    <title>Fallah Connect</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -45,19 +45,18 @@
                 <div class="sidebar_blog_1">
                     <div class="sidebar-header">
                         <div class="logo_section">
-                            <a href="{{ route('home') }}"><img class="logo_icon img-responsive"
-                                    src="{{ asset('images/logo/logo_icon.png') }}" alt="#" /></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images/layout_img/hechmi.jpg')}}" alt="#" /><span class="name_user">{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</span></a>
                         </div>
                     </div>
                     <div class="sidebar_user_info">
                         <div class="icon_setting"></div>
                         <div class="user_profle_side">
                             <div class="user_img"><img class="img-responsive"
-                                    src="{{ asset('images/layout_img/Moi.jpg') }}" alt="#" /></div>
-                            <div class="user_info">
-                                <h6>Ghassen Belgacem </h6>
-                                <p><span class="online_animation"></span> Online</p>
-                            </div>
+                                    src="{{ asset('images/layout_img/hechmi.jpg') }}" alt="#" /></div>
+                                    <div class="user_info">
+                                        <h6>{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</h6>
+                                        <p><span class="online_animation"></span> En ligne</p>
+                                    </div>
                         </div>
                     </div>
                 </div>
@@ -140,17 +139,18 @@
                             <div class="right_topbar">
                                 <div class="icon_info">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge"></span></a></li>
-                                 <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge"></span></a></li>
+                                        <li><a href="#"><i class="fa fa-bell-o"></i><span
+                                                    class="badge"></span></a></li>
+                                        <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-envelope-o"></i><span
+                                                    class="badge"></span></a></li>
                                     </ul>
                                     <ul class="user_profile_dd">
                                         <li>
                                             <a class="dropdown-toggle" data-toggle="dropdown"><img
                                                     class="img-responsive rounded-circle"
-                                                    src="{{ asset('images/layout_img/Moi.jpg') }}"
-                                                    alt="#" /><span class="name_user">Ghassen
-                                                    Belgacem</span></a>
+                                                    src="{{ asset('images/layout_img/hechmi.jpg') }}"
+                                                    alt="#" /><span class="name_user">{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</span></a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="{{ asset('profile') }}">Mon
                                                     Profile</a>
@@ -254,7 +254,7 @@
                                                     <h4 class="brief">Digital Strategist</h4>
                                                     <div class="contact_inner">
                                                         <div class="left">
-                                                            <h3>Hechmi Jaideni</h3>
+                                                            <h3>Ghassen Belgacem</h3>
                                                             <p><strong>About: </strong>Agriculteur</p>
                                                             <ul class="list-unstyled">
                                                                 <li><i class="fa fa-envelope-o"></i> : Hechmi@gmail.com
@@ -265,7 +265,7 @@
                                                         <div class="right">
                                                             <div class="profile_contacts">
                                                                 <img class="img-responsive"
-                                                                    src="{{ asset('images/layout_img/hechmi.jpg') }}"
+                                                                    src="{{ asset('images/layout_img/Moi.jpg') }}"
                                                                     alt="#" />
                                                             </div>
                                                         </div>
@@ -305,7 +305,7 @@
                                                     <h4 class="brief">Digital Strategist</h4>
                                                     <div class="contact_inner">
                                                         <div class="left">
-                                                            <h3>Mootaz Bourguiba</h3>
+                                                            <h3>Mootez Bourguiba</h3>
                                                             <p><strong>About: </strong>Agriculteur</p>
                                                             <ul class="list-unstyled">
                                                                 <li><i class="fa fa-envelope-o"></i> : test@gmail.com
@@ -316,7 +316,7 @@
                                                         <div class="right">
                                                             <div class="profile_contacts">
                                                                 <img class="img-responsive"
-                                                                    src="{{ asset('images/layout_img/msg2.png') }}"
+                                                                    src="{{ asset('images/layout_img/msg3.png') }}"
                                                                     alt="#" />
                                                             </div>
                                                         </div>
