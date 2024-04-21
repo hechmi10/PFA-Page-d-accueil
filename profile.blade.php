@@ -96,8 +96,10 @@
                      </li>
                      
                      <li>
-                        <a href="{{route('contact2')}}">
-                        <i class="fa fa-paper-plane red_color"></i> <span>Contact</span></a>
+                        <form action="{{route('contact2')}}" method="post">
+                         <a href="{{route('contact2')}}">
+                         <i class="fa fa-paper-plane red_color"></i> <span>Contact</span></a>
+                         </form>
                      </li>
                      <li class="active">
                         
@@ -116,10 +118,9 @@
                            </li>
                         </ul>
                      </li>
-                     <li><a href="{{route('map')}}"><i class="fa fa-map purple_color2"></i> <span>Map</span></a></li>
-           
-                     <li><a href="{{route('settings')}}"><i class="fa fa-cog yellow_color"></i> <span>Message</span></a></li>
-                     <li><a href="{{route('jeudesimulation')}}"><i class="fa fa-cog yellow_color"></i> <span>Simulation</span></a></li>
+                     <li><form action="{{route('map')}}" method="post"><a href="{{route('map')}}"><i class="fa fa-map purple_color2"></i> <span>Map</span></a></form></li>
+                     <li><form action="{{route('settings')}}" method="post"><a href="{{route('settings')}}"><i class="fa fa-cog yellow_color"></i> <span>Message</span></a></form></li>
+                     <li><form action="{{route('jeudesimulation')}}" method="post"><a href="{{route('jeudesimulation')}}"><i class="fa fa-cog yellow_color"></i> <span>Simulation</span></a></form></li>
                   </ul>
                </div>
             </nav>

@@ -257,7 +257,7 @@
                                                             <h3>Ghassen Belgacem</h3>
                                                             <p><strong>About: </strong>Agriculteur</p>
                                                             <ul class="list-unstyled">
-                                                                <li><i class="fa fa-envelope-o"></i> : Hechmi@gmail.com
+                                                                <li><i class="fa fa-envelope-o"></i> : Ghassen@gmail.com
                                                                 </li>
                                                                 <li><i class="fa fa-phone"></i> : 987 654 3210</li>
                                                             </ul>
@@ -308,7 +308,7 @@
                                                             <h3>Mootez Bourguiba</h3>
                                                             <p><strong>About: </strong>Agriculteur</p>
                                                             <ul class="list-unstyled">
-                                                                <li><i class="fa fa-envelope-o"></i> : test@gmail.com
+                                                                <li><i class="fa fa-envelope-o"></i> : bourguibamootez73@gmail.com
                                                                 </li>
                                                                 <li><i class="fa fa-phone"></i> : 987 654 3210</li>
                                                             </ul>

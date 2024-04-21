@@ -8,7 +8,7 @@ use Illuminate\Database\QueryException; // Importez QueryException
 
 class ProfileController extends Controller
 {
-    public static function showProfile(Request $request)
+    public function showProfile(Request $request)
     {
         try {
             // Récupérer l'agriculteur par son adresse email

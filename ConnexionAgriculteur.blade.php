@@ -85,9 +85,6 @@
                         <button type="submit">Rech</button>
                       </button>
                   </form>
-                  <a href="{{route('Profile')}}">
-                      <button type="submit">Profil</button>
-                  </a>
               </div>
             </nav>
         </header>
