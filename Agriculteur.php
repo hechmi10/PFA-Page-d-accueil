@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Agriculteur extends Model
 {
-    protected $table1 = 'agriculteurs inscription';
-    protected $table2 = 'agriculteurs connexion';
+    protected $table = 'agriculteurs inscription'; // Specify the correct table name
+    protected $fillable=['Cin','Nom','Prènom','MotDePasse','Email','NumTel'];
     use HasFactory;
 }
+?>
