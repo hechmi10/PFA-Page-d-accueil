@@ -28,7 +28,7 @@ class RegistrationController extends Controller
                     'NumTel' => $numtel
                 ]);
 
-                return redirect("/profile")->with("Inscription réussie");
+                return redirect()->route('login_farmer')->with('success', 'Inscription réussie');
             } catch (\Exception $e) {
                 return "Inscription échouée, veuillez réessayer";
             }

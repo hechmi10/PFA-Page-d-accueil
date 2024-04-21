@@ -50,7 +50,7 @@
                      <div class="icon_setting"></div>
                      <div class="user_profle_side">
                         <div class="user_img">
-                           <img src="{{ asset('images/layout_img/hechmi.jpg') }}" class="img-responsive" alt="Image de profil" />
+                           <img class="img-responsive" id="my-file" src="{{asset('images/layout_img/anonymous.jpg')}}" alt="Image de profil" />
                            <!-- Ou, si vous utilisez un champ de fichier pour l'image, vous pouvez utiliser un tag input de type 'file' -->
                            <!-- Assurez-vous de gérer le téléchargement d'images correctement dans votre application -->
                        </div>
@@ -144,10 +144,10 @@
                               </ul>
                               <ul class="user_profile_dd">
                                  <li>
-                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images\layout_img\hechmi.jpg')}}" alt="#" /><span class="name_user">{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</span></a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" id="my-file" src="{{asset('images/layout_img/anonymous.jpg')}}" alt="#" /><span class="name_user">{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</span></a>
                                     <div class="dropdown-menu">
-                                       <a class="dropdown-item" href="{{route('Profile')}}">Mon Profile</a>
-                                       <a class="dropdown-item" href="{{route('settings')}}">Message</a>
+                                       <a class="dropdown-item" href="{{asset('Profile')}}">Mon Profile</a>
+                                       <a class="dropdown-item" href="{{asset('settings')}}">Message</a>
                                        <a class="dropdown-item" href="help.html">Help</a>
                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
                                     </div>
@@ -185,7 +185,10 @@
                                     <!-- profile image -->
                                     <div class="col-lg-12">
                                        <div class="full dis_flex center_text">
-                                          <div class="profile_img"><img width="180" class="rounded-circle" src="{{asset('images\layout_img\hechmi.jpg')}}" alt="#" /></div>
+                                          <div class="profile_img"><img width="180" class="rounded-circle" id="my-file" src="{{asset('images/layout_img/anonymous.jpg')}}" alt="#" />
+                                           <input type="file" accept=".jpg" id="my-file" />
+                                           <br>
+                                           <input type="button" value="Save changes" id="save" /></div>
                                           <div class="profile_contant">
                                              <div class="contact_inner">
                                                 <h3>{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</h3>
@@ -313,6 +316,7 @@
       </script>
       <!-- custom js -->
       <script src="{{asset('js/custom.js')}}"></script>
+      <script src="{{asset('js/script.js')}}"></script>
       <!-- calendar file css -->    
       <script src="{{asset('js/semantic.min.js')}}"></script>
    </body>

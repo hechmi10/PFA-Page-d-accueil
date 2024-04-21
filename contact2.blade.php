@@ -45,18 +45,18 @@
                 <div class="sidebar_blog_1">
                     <div class="sidebar-header">
                         <div class="logo_section">
-                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images/layout_img/hechmi.jpg')}}" alt="#" /><span class="name_user">{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</span></a>
+
                         </div>
                     </div>
                     <div class="sidebar_user_info">
                         <div class="icon_setting"></div>
                         <div class="user_profle_side">
                             <div class="user_img"><img class="img-responsive"
-                                    src="{{ asset('images/layout_img/hechmi.jpg') }}" alt="#" /></div>
-                                    <div class="user_info">
-                                        <h6>{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</h6>
-                                        <p><span class="online_animation"></span> En ligne</p>
-                                    </div>
+                                    src="{{ asset('images/layout_img/anonymous.jpg') }}" alt="#" /></div>
+                            <div class="user_info">
+                                <h6>{{ session('Nom') . ' ' . session('Prènom') }}</h6>
+                                <p><span class="online_animation"></span> En ligne</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,8 +149,9 @@
                                         <li>
                                             <a class="dropdown-toggle" data-toggle="dropdown"><img
                                                     class="img-responsive rounded-circle"
-                                                    src="{{ asset('images/layout_img/hechmi.jpg') }}"
-                                                    alt="#" /><span class="name_user">{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</span></a>
+                                                    src="{{ asset('images/layout_img/anonymous.jpg') }}"
+                                                    alt="#" /><span
+                                                    class="name_user">{{ session('Nom') . ' ' . session('Prènom') }}</span></a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="{{ asset('profile') }}">Mon
                                                     Profile</a>
@@ -257,7 +258,8 @@
                                                             <h3>Ghassen Belgacem</h3>
                                                             <p><strong>About: </strong>Agriculteur</p>
                                                             <ul class="list-unstyled">
-                                                                <li><i class="fa fa-envelope-o"></i> : Ghassen@gmail.com
+                                                                <li><i class="fa fa-envelope-o"></i> :
+                                                                    Ghassen@gmail.com
                                                                 </li>
                                                                 <li><i class="fa fa-phone"></i> : 987 654 3210</li>
                                                             </ul>
@@ -308,7 +310,8 @@
                                                             <h3>Mootez Bourguiba</h3>
                                                             <p><strong>About: </strong>Agriculteur</p>
                                                             <ul class="list-unstyled">
-                                                                <li><i class="fa fa-envelope-o"></i> : bourguibamootez73@gmail.com
+                                                                <li><i class="fa fa-envelope-o"></i> :
+                                                                    bourguibamootez73@gmail.com
                                                                 </li>
                                                                 <li><i class="fa fa-phone"></i> : 987 654 3210</li>
                                                             </ul>

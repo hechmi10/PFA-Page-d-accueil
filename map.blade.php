@@ -53,9 +53,9 @@
                         <div class="icon_setting"></div>
                         <div class="user_profle_side">
                             <div class="user_img"><img class="img-responsive"
-                                    src="{{ asset('images/layout_img/hechmi.jpg') }}" alt="#" /></div>
+                                    src="{{ asset('images/layout_img/anonymous.jpg') }}" alt="#" /></div>
                             <div class="user_info">
-                           <h6>{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</h6>
+                           <h6>{{session('Nom').' '.session('Prènom')}}</h6>
                            <p><span class="online_animation"></span> En ligne</p>
                        </div>
                         </div>
@@ -146,7 +146,7 @@
                                     </ul>
                                     <ul class="user_profile_dd">
                                         <li>
-                                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images/layout_img/hechmi.jpg')}}" alt="#" /><span class="name_user">{{Agriculteur::get('Nom')}} {{Agriculteur::get('Prènom')}}</span></a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images/layout_img/anonymous.jpg')}}" alt="#" /><span class="name_user">{{session('Nom')}} {{session('Prènom')}}</span></a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="{{ route('Profile') }}">Mon
                                                     Profile</a>

@@ -48,15 +48,14 @@ use App\Http\Controllers\LoginController;
                <div class="sidebar_blog_1">
                   <div class="sidebar-header">
                      <div class="logo_section">
-                        <a href="{{route('home')}}"><img class="logo_icon img-responsive" src="{{asset('images/logo/logo_icon.png')}}" alt="#" /></a>
                      </div>
                   </div>
                   <div class="sidebar_user_info">
                      <div class="icon_setting"></div>
                      <div class="user_profle_side">
-                        <div class="user_img"><img class="img-responsive" src="{{asset('images/layout_img/hechmi.jpg')}}" alt="#" /></div>
+                        <div class="user_img"><img class="img-responsive" src="{{asset('images/layout_img/anonymous.jpg')}}" alt="#" /></div>
                         <div class="user_info">
-                           <h6>{{ $agriculteur->Nom }} {{ $agriculteur->Prènom }}</h6>
+                           <h6>{{ session('Nom') }} {{ session('Prènom') }}</h6>
                            <p><span class="online_animation"></span> En ligne</p>
                        </div>
                      </div>
@@ -144,7 +143,7 @@ use App\Http\Controllers\LoginController;
                               </ul>
                               <ul class="user_profile_dd">
                                  <li>
-                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images/layout_img/hechmi.jpg')}}" alt="#" /><span class="name_user">{{$agriculteur->Nom}} {{$agriculteur->Prènom}}</span></a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="{{asset('images/layout_img/anonymous.jpg')}}" alt="#" /><span class="name_user">{{session('Nom')}} {{session('Prènom')}}</span></a>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="{{route('Profile')}}">Mon Profile</a>
                                         <a class="dropdown-item" href="{{route('settings')}}">Message</a>
