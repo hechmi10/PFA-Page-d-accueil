@@ -13,6 +13,7 @@ use App\Http\Controllers\demoncontroller;
 use App\Http\Controllers\SimulationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Middleware\FetchUserDetails;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
