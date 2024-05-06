@@ -26,7 +26,7 @@ public class LoginPage {
     private Scene scene;
     private Connection connection;
 
-    public LoginPage(Stage primaryStage) {
+    public LoginPage(Stage primaryStage,Connection connection) {
         // Initialize the JavaFX components
         BackgroundImage backgroundImage = new BackgroundImage(
                 new Image("choose-bg.jpg", 1600, 900, false, true),
@@ -75,14 +75,13 @@ public class LoginPage {
                 // Clear fields after successful login
                 loginEmailField.clear();
                 loginPasswordField.clear();
-                loginErrorLabel.setText("");
                 System.out.println("Connecté");
             } else {
                 loginErrorLabel.setText("Email ou mot de passe incorrect");
             }
         });
-
-        scene = new Scene(layout, 1200, 700);
+        this.connection=connection;
+        scene = new Scene(layout, 800, 600);
     }
 
     // Method to perform login
@@ -99,7 +98,7 @@ public class LoginPage {
             connection = DriverManager.getConnection(url, user, pass);
 
             // Query to check if the user exists with the given email and password
-            String query = "SELECT * FROM users WHERE email = ? AND password = ?";
+            String query = "SELECT * FROM agriculteurs_inscription WHERE Email = ? AND MotDePasse = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
@@ -118,7 +117,7 @@ public class LoginPage {
                     connection.close();
                 }
             } catch (SQLException e) {
-                ;
+                System.out.println(e.getMessage());
             }
         }
         return false;
@@ -128,5 +127,4 @@ public class LoginPage {
         return scene;
     }
 }
-
 

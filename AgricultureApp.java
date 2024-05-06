@@ -1,20 +1,28 @@
-import java.sql.*;
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.Scene;
+import java.sql.*;
 public class AgricultureApp extends Application {
 
-    private Connection connection;
+
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws SQLException {
         try {
-            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/agri_connect","root","");
-            LoginPage loginPage = new LoginPage(primaryStage);
-            SignUpPage signupPage = new SignUpPage(primaryStage, connection);
-            HomePage homePage = new HomePage(primaryStage, loginPage.getScene(), signupPage.getScene());
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/agri_connect", "root", "");
+            SignUpPage s = new SignUpPage(primaryStage, connection);
+            LoginPage l=new LoginPage(primaryStage,connection);
+
+            // Create an instance of the HomePage class
+            HomePage homePage = new HomePage(primaryStage,l.getScene(),s.getScene());
+
+            // Set the scene to the homepage
             primaryStage.setScene(homePage.getScene());
-            primaryStage.setTitle("Fallah Connect");
+
+            // Set the title of the stage
+            primaryStage.setTitle("FallahConn");
+
+            // Display the stage
             primaryStage.show();
         }catch(SQLException e){
             System.out.println(e.getMessage());
@@ -24,4 +32,3 @@ public class AgricultureApp extends Application {
         launch(args);
     }
 }
-
