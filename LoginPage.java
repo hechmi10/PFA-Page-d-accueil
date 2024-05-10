@@ -76,6 +76,7 @@ public class LoginPage {
                 loginEmailField.clear();
                 loginPasswordField.clear();
                 System.out.println("Connecté");
+                loginErrorLabel.setText("");
             } else {
                 loginErrorLabel.setText("Email ou mot de passe incorrect");
             }
