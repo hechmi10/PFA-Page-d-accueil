@@ -57,9 +57,6 @@
           <a class="" href="{{ route('marketplace') }}">
               Marketplace
           </a>
-          <a class="" href="{{ route('chatbot') }}">
-              Chatbot
-          </a>
           <a class="" href="{{ route('farm_management') }}">
               Gestion des fermes
           </a>
@@ -69,7 +66,7 @@
           <a class="" href="{{ route('login_farmer') }}">
               Connexion
           </a>
-          <a class="" href="{{ asset('jeudesimulation.html') }}">
+          <a class="" href="{{ asset('jeudesimulation') }}">
               Jeu de simulation
           </a>
           <a class="" href="{{ route('contact') }}">

@@ -83,16 +83,7 @@
                         Fallah Connect
                     </span>
                 </a>
-                <div class="user_option">
-                    <form class="form-inline">
-                        <button class="btn  nav_search-btn" type="submit">
-                            <button type="submit">Rech</button>
-                        </button>
-                    </form>
-                    <a href="{{route('Profile')}}">
-                        <button type="submit">Profil</button>
-                    </a>
-                </div>
+                
             </nav>
         </header>
         <!-- end header section -->

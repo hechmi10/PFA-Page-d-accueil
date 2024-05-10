@@ -146,8 +146,8 @@
                                  <li>
                                     <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" id="my-file" src="{{asset('images/layout_img/anonymous.jpg')}}" alt="#" /><span class="name_user">{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</span></a>
                                     <div class="dropdown-menu">
-                                       <a class="dropdown-item" href="{{asset('Profile')}}">Mon Profile</a>
-                                       <a class="dropdown-item" href="{{asset('settings')}}">Message</a>
+                                       <a class="dropdown-item" href="{{route('Profile')}}">Mon Profile</a>
+                                       <a class="dropdown-item" href="{{route('settings')}}">Message</a>
                                        <a class="dropdown-item" href="help.html">Help</a>
                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
                                     </div>
@@ -185,10 +185,12 @@
                                     <!-- profile image -->
                                     <div class="col-lg-12">
                                        <div class="full dis_flex center_text">
-                                          <div class="profile_img"><img width="180" class="rounded-circle" id="my-file" src="{{asset('images/layout_img/anonymous.jpg')}}" alt="#" />
-                                           <input type="file" accept=".jpg" id="my-file" />
-                                           <br>
-                                           <input type="button" value="Save changes" id="save" /></div>
+                                          <div class="profile_img">
+                                             <img width="180" class="rounded-circle" id="profile-image"  alt="#" />
+                                             <br>
+                                             <input type="file" accept=".jpg" id="file-input" />
+                                             <br>
+                                         </div>
                                           <div class="profile_contant">
                                              <div class="contact_inner">
                                                 <h3>{{$agriculteur->Nom.' '.$agriculteur->Prènom}}</h3>
@@ -294,6 +296,19 @@
             </div>
          </div>
       </div>
+      <script>
+         document.getElementById("file-input").addEventListener("change", function(event) {
+             var file = event.target.files[0];
+             var reader = new FileReader();
+             
+             reader.onload = function(e) {
+                 var imageData = e.target.result;
+                 document.getElementById("profile-image").src = imageData;
+             };
+             
+             reader.readAsDataURL(file);
+         });
+         </script>
       <!-- jQuery -->
       <script src="{{asset('js/jquery.min.js')}}"></script>
       <script src="{{asset('js/popper.min.js')}}"></script>
@@ -316,7 +331,6 @@
       </script>
       <!-- custom js -->
       <script src="{{asset('js/custom.js')}}"></script>
-      <script src="{{asset('js/script.js')}}"></script>
       <!-- calendar file css -->    
       <script src="{{asset('js/semantic.min.js')}}"></script>
    </body>

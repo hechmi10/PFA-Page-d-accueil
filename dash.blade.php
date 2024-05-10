@@ -18,10 +18,41 @@
 
     </header>
     <section class="sidebar">
+        <nav>
+            <ul>
+            <li>
+                    <a href="#" class="logo">
+                        <img src="{{asset('images/logo/logoapp.png')}}" alt="#">
+                        <span class="nav-item">Fallaha Connect</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('home')}}">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('Profile')}}">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-item" >Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-wallet"></i>
+                        <span class="nav-item">MarketPlace</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-        <form action="{{ route('enregistrer') }}" method="post">
-            @csrf
 
+
+
+    </section>
+
+       
 
     </section>
 
@@ -29,26 +60,71 @@
 
 
     <main class="main">
-
         <div class="card">
             <canvas id="Type" class="chart"></canvas>
         </div>
-        <div class="card" id="results">
+        <div class="card" >
+            <div id="results"></div>
+
+
+         </div>
+
+         <div class="card" >
+            <div id="totalprix" class="number"></div>
+            <div class="icon-box">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="card-name">totalprix</div>
 
         </div>
 
-        <div class="card" id="totalprix" name="totalprix">
+
+            <div class="card" >
+        <div id="totalProduct" class="number"></div>
+        <div class="icon-box">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="card-name">totalProduct</div>
+
 
 
         </div>
-        <div class="card" id="totalProduct" name="totalProduct">
+
+
+         <div class="card" >
+        <div id="netpayment" class="number"></div>
+        <div class="icon-box">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="card-name">netpayment</div>
 
 
         </div>
-        <div class="card" id="netpayment" name="netpayment"></div>
-        <div class="card" id="gain" name="gain"></div>
-        <input type="submit" value="enregistrer">
+
+         <div class="card" >
+        <div id="gain" class="number"></div>
+        <div class="icon-box">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <div class="card-name">gain</div>
+
+        </div>
+
+        <form action="{{ route('enregistrer') }}" method="post">
+            @csrf
+        
+            <!-- Champs de formulaire cachés pour stocker les valeurs -->
+            <input type="hidden" name="totalprix" id="hidden-totalprix" value="">
+            <input type="hidden" name="totalProduct" id="hidden-totalProduct" value="">
+            <input type="hidden" name="netpayment" id="hidden-netpayment" value="">
+            <input type="hidden" name="gain" id="hidden-gain" value="">
+        
+            <!-- Autres champs de formulaire peuvent être ajoutés ici -->
+        
+            <!-- Bouton de soumission du formulaire -->
+            <input type="submit" value="Enregistrer">
         </form>
+        
 
 
 
@@ -88,11 +164,15 @@
                     const totalProductDiv1 = document.getElementById('totalprix');
                     const totalProductDiv2 = document.getElementById('netpayment');
                     const totalProductDiv3 = document.getElementById('gain');
-                    totalProductDiv.textContent = ` Total Product ${totalProduct} Kg
+                    totalProductDiv.textContent = `  ${totalProduct} Kg
                                               `;
-                    totalProductDiv1.textContent = `Total Prix: ${totalprix} TND `;
-                    totalProductDiv2.textContent = `Total de Paiement: ${netpayment} TND `;
-                    totalProductDiv3.textContent = `Bénéfice Net: ${gain} TND `;
+                    totalProductDiv1.textContent = ` ${totalprix} TND `;
+                    totalProductDiv2.textContent = ` ${netpayment} TND `;
+                    totalProductDiv3.textContent = ` ${gain} TND `;
+                    document.getElementById("hidden-totalprix").value = document.getElementById("totalprix").textContent;
+                    document.getElementById("hidden-totalProduct").value = document.getElementById("totalProduct").textContent;
+                    document.getElementById("hidden-netpayment").value = document.getElementById("netpayment").textContent;
+                    document.getElementById("hidden-gain").value = document.getElementById("gain").textContent;
                     // Initialisation du graphique
                     if (simulationResults.type === 'Arbres') {
                         var ctx = document.getElementById('Type').getContext('2d');

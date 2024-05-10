@@ -104,19 +104,16 @@ body {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="{{route('home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="{{route('login_farmer')}}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Signup</a>
+                        <a class="nav-link" href="{{route('register_farmer')}}">Signup</a>
                     </li>
                 </ul>
             </div>
