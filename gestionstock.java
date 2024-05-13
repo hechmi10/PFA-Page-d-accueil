@@ -16,6 +16,9 @@ import javafx.stage.Stage;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.DateTimeException;
 
 public class gestionstock {
     private Scene scene;
@@ -71,7 +74,7 @@ public class gestionstock {
             int id=0;
             String productName = productNameField.getText();
             String quantity = quantityField.getText();
-            String purchaseDate = purchaseDateField.getText();
+            String purchaseDate =formatDate(purchaseDateField.getText());
             String supplier = supplierField.getText();
             String url = "jdbc:mysql://localhost:3306/agri_connect";
             String user = "root";
@@ -81,9 +84,9 @@ public class gestionstock {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 this.connection = DriverManager.getConnection(url, user, pass);
                 Statement stmt=connection.createStatement();
-                String query="Insert into stocks values('"+id+"','"+productName+"','"+quantity+"','"+purchaseDate+"','"+supplier+"')";
+                String query="Insert into stocks (product_name,quantity,purchase_date,supplier) values('"+productName+"','"+quantity+"','"+purchaseDate+"','"+supplier+"')";
                 stmt.executeUpdate(query);
-                System.out.println("Recolte planifié");
+                System.out.println("Stock ajouté");
                 id++;
                 errorLabel.setText(""); // Clear error message if no exception occurs
             } catch (Exception e) {
@@ -93,6 +96,20 @@ public class gestionstock {
         });
 
         this.scene = new Scene(layout, 800, 600);
+    }
+    private static String formatDate(String dateString) {
+        try {
+            SimpleDateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd");
+            java.util.Date date = inputFormat.parse(dateString);
+            return outputFormat.format(date);
+        } catch (ParseException e1) {
+            e1.printStackTrace();
+            return null;
+        }catch(DateTimeException e2){
+            e2.printStackTrace();
+            return null;
+        }
     }
 
     public Scene getScene() {

@@ -10,6 +10,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.DateTimeException;
 
 public class suiviculture {
 
@@ -92,7 +95,7 @@ public class suiviculture {
             String pass = "";
             int id=0;
             String nom=nomCultureField.getText();
-            String date=datePlantationField.getText();
+            String date=formatDate(datePlantationField.getText());
             String type=typeSolField.getText();
             String quantite=quantiteField.getText();
             String description=descriptionField.getText();
@@ -100,7 +103,7 @@ public class suiviculture {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 this.connection = DriverManager.getConnection(url, user, pass);
                 Statement stmt=connection.createStatement();
-                String query="Insert into cultures values('"+id+"','"+nom+"','"+date+"','"+type+"','"+quantite+"','"+description+"')";
+                String query="Insert into cultures (nom_culture,date_plantation,type_sol,quantite,description) values('"+nom+"','"+date+"','"+type+"','"+quantite+"','"+description+"')";
                 stmt.executeUpdate(query);
                 System.out.println("Culture ajouté");
                 id++;
@@ -123,6 +126,20 @@ public class suiviculture {
         footer.getChildren().add(footerLabel);
         root.setBottom(footer);
         this.scene = new Scene(root, 800, 600);
+    }
+    private static String formatDate(String dateString) {
+        try {
+            SimpleDateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd");
+            java.util.Date date = inputFormat.parse(dateString);
+            return outputFormat.format(date);
+        } catch (ParseException e1) {
+            e1.printStackTrace();
+            return null;
+        }catch (DateTimeException e2){
+            e2.printStackTrace();
+            return null;
+        }
     }
 
     public Scene getScene(){

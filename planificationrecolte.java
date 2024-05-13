@@ -15,6 +15,9 @@ import javafx.stage.Stage;
 
 import java.sql.*;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.DateTimeException;
 
 public class planificationrecolte {
     private Scene scene;
@@ -69,7 +72,7 @@ public class planificationrecolte {
         submitButton.setOnAction(event -> {
             int id=0;
             String nom = nomField.getText();
-            String dateRecolte = dateRecolteField.getText();
+            String dateRecolte =formatDate(dateRecolteField.getText());
             String mainOeuvre = mainOeuvreField.getText();
             String equipement = equipementField.getText();
             String url = "jdbc:mysql://localhost:3306/agri_connect";
@@ -78,7 +81,7 @@ public class planificationrecolte {
             try {
                 this.connection = DriverManager.getConnection(url, user, pass);
                 Statement stmt=connection.createStatement();
-                String query="Insert into planification_recoltes values('"+id+"','"+nom+"','"+dateRecolte+"','"+mainOeuvre+"','"+equipement+"')";
+                String query="Insert into planification_recoltes (nom,date_recolte_prevue,main_oeuvre,equipement,culture_id) values('"+nom+"','"+dateRecolte+"','"+mainOeuvre+"','"+equipement+"','"+id+"')";
                 stmt.executeUpdate(query);
                 System.out.println("Recolte planifié");
                 id++;
@@ -88,6 +91,20 @@ public class planificationrecolte {
         });
 
         this.scene = new Scene(layout, 800, 600);
+    }
+    private static String formatDate(String dateString) {
+        try {
+            SimpleDateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd");
+            java.util.Date date = inputFormat.parse(dateString);
+            return outputFormat.format(date);
+        } catch (ParseException e1) {
+            e1.printStackTrace();
+            return null;
+        }catch (DateTimeException e2){
+            e2.printStackTrace();
+            return null;
+        }
     }
 
     public Scene getScene() {
