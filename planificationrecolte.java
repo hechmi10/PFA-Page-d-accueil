@@ -70,7 +70,6 @@ public class planificationrecolte {
         layout.addRow(6, errorLabel);
 
         submitButton.setOnAction(event -> {
-            int id=0;
             String nom = nomField.getText();
             String dateRecolte =formatDate(dateRecolteField.getText());
             String mainOeuvre = mainOeuvreField.getText();
@@ -81,10 +80,9 @@ public class planificationrecolte {
             try {
                 this.connection = DriverManager.getConnection(url, user, pass);
                 Statement stmt=connection.createStatement();
-                String query="Insert into planification_recoltes (nom,date_recolte_prevue,main_oeuvre,equipement,culture_id) values('"+nom+"','"+dateRecolte+"','"+mainOeuvre+"','"+equipement+"','"+id+"')";
+                String query="Insert into planification_recoltes (nom,date_recolte_prevue,main_oeuvre,equipement) values('"+nom+"','"+dateRecolte+"','"+mainOeuvre+"','"+equipement+"')";
                 stmt.executeUpdate(query);
                 System.out.println("Recolte planifié");
-                id++;
             } catch (Exception e) {
                 e.printStackTrace();
             }

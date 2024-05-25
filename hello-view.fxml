@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="HelloController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Créer un nouveau profil" style="-fx-font-size: 20px;"/>
+            <TextField promptText="Nom"/>
+            <TextField promptText="Prénom"/>
+            <TextField promptText="Adresse email"/>
+            <TextField promptText="Mot de passe" fx:id="passwordField"/>
+            <Button text="Créer" onAction="#createProfile"/>
+        </VBox>
+    </center>
+
+</BorderPane>

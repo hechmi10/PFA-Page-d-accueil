@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1242.0" styleClass="body-background" stylesheets="@profile.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProfileController">
+   <top>
+      <HBox prefHeight="65.0" prefWidth="779.0" spacing="50.0" styleClass="green-background" stylesheets="@profile.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/436598490_271491626033863_3123193851014953222_n.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin></ImageView>
+            <Pane prefHeight="69.0" prefWidth="137.0">
+               <children>
+                  <Button layoutX="39.0" layoutY="22.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="39.0" styleClass="round-button" stylesheets="@profile.css">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon/téléchargement.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children></Pane>
+            <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="540.0" spacing="100.0">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                     <image>
+                        <Image url="@icon/house.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                     <image>
+                        <Image url="@icon/news-reporter.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                     <image>
+                        <Image url="@icon/meeting.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                     <image>
+                        <Image url="@icon/gallery.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane prefHeight="71.0" prefWidth="26.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="39.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                     <image>
+                        <Image url="@icon/messages.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="163.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                     <image>
+                        <Image url="@icon/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="101.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                     <image>
+                        <Image url="@icon/notification.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <ScrollPane prefHeight="722.0" prefWidth="201.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="profileView" alignment="TOP_CENTER" layoutX="-11.0" prefHeight="728.0" prefWidth="227.0" spacing="30.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="88.0" prefWidth="246.0">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets right="140.0" />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@icon/419242352_739685751609993_5956027037040441493_n.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Pane prefHeight="88.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                              <Label fx:id="nameLabel" />
+                              <Label fx:id="surnameLabel" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                 <image>
+                                    <Image url="@icon/multiple-users-silhouette.png" />
+                                 </image>
+                              </ImageView>
+                              <Label />
+                              <Label prefHeight="27.0" prefWidth="133.0" text="Friends">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                 <image>
+                                    <Image url="@icon/connection.png" />
+                                 </image>
+                              </ImageView>
+                              <Label />
+                              <Label prefHeight="27.0" prefWidth="136.0" text="Groups">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                 <image>
+                                    <Image url="@icon/event.png" />
+                                 </image>
+                              </ImageView>
+                              <Label />
+                              <Label prefHeight="27.0" prefWidth="137.0" text="Events">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                 <image>
+                                    <Image url="@icon/favorite.png" />
+                                 </image>
+                              </ImageView>
+                              <Label />
+                              <Label prefHeight="27.0" prefWidth="136.0" text="Favorits">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                 <image>
+                                    <Image url="@icon/live-streaming.png" />
+                                 </image>
+                              </ImageView>
+                              <Label />
+                              <Label prefHeight="27.0" prefWidth="137.0" text="Live Videos">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                 <image>
+                                    <Image url="@icon/games.png" />
+                                 </image>
+                              </ImageView>
+                              <Label />
+                              <Label prefHeight="27.0" prefWidth="133.0" text="Gaming Video">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                 <image>
+                                    <Image url="@icon/vital-signs.png" />
+                                 </image>
+                              </ImageView>
+                              <Label />
+                              <Label prefHeight="27.0" prefWidth="132.0" text="Simulation">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <Label />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </left>
+   <center>
+      <HBox prefHeight="721.0" prefWidth="681.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="721.0" prefWidth="732.0" styleClass="body-background" stylesheets="@profile.css">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="161.0" prefWidth="747.0" spacing="10.0" styleClass="post-background" stylesheets="@profile.css">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="72.0" prefWidth="787.0">
+                           <children>
+                              <HBox alignment="CENTER" maxHeight="166.0" maxWidth="715.0" minHeight="81.0" minWidth="100.0" prefHeight="81.0" prefWidth="715.0" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="58.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icon/419242352_739685751609993_5956027037040441493_n.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField prefHeight="50.0" prefWidth="700.0" promptText="Publier un statut" styleClass="text-field" stylesheets="@profile.css" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Pane maxWidth="-Infinity" prefHeight="1.0" prefWidth="500.0" style="-fx-background-color: #F0F2F5;" />
+                        <HBox prefHeight="39.0" prefWidth="787.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                       <image>
+                                          <Image url="@icon/live-streaming.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="27.0" prefWidth="133.0" text="Live Video" textFill="#606622">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                       <image>
+                                          <Image url="@icon/gallery.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="27.0" prefWidth="133.0" text="Image/ Video" textFill="#606622">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="round-button">
+                                       <image>
+                                          <Image url="@icon/live-streaming.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="27.0" prefWidth="133.0" text="Feelings/Activities" textFill="#606622">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" spacing="10.0" />
+                        <HBox prefHeight="39.0" prefWidth="787.0" />
+                        <HBox prefHeight="39.0" prefWidth="787.0" />
+                     </children>
+                  </VBox>
+                  <ScrollPane>
+                     <content>
+                        <Pane prefHeight="560.0" prefWidth="669.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <right>
+      <VBox prefHeight="721.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Contacts" textFill="#606622">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="60.0" prefWidth="153.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/téléchargement.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/téléchargement.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox prefWidth="347.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="326.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/téléchargement (1).png" />
+                                 </image>
+                              </ImageView>
+                              <Label contentDisplay="TOP" prefHeight="27.0" prefWidth="133.0" text="User1">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/téléchargement (1).png" />
+                                 </image>
+                              </ImageView>
+                              <Label contentDisplay="TOP" prefHeight="27.0" prefWidth="133.0" text="User2">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/téléchargement (1).png" />
+                                 </image>
+                              </ImageView>
+                              <Label contentDisplay="TOP" prefHeight="27.0" prefWidth="133.0" text="User3">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/téléchargement (1).png" />
+                                 </image>
+                              </ImageView>
+                              <Label contentDisplay="TOP" prefHeight="27.0" prefWidth="133.0" text="User4">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/téléchargement (1).png" />
+                                 </image>
+                              </ImageView>
+                              <Label contentDisplay="TOP" prefHeight="27.0" prefWidth="133.0" text="User5">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/téléchargement (1).png" />
+                                 </image>
+                              </ImageView>
+                              <Label contentDisplay="TOP" prefHeight="27.0" prefWidth="133.0" text="User6">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/téléchargement (1).png" />
+                                 </image>
+                              </ImageView>
+                              <Label contentDisplay="TOP" prefHeight="27.0" prefWidth="133.0" text="User7">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

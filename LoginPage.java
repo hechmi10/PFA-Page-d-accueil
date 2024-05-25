@@ -26,8 +26,7 @@ public class LoginPage {
     private Scene scene;
     private Connection connection;
 
-    public LoginPage(Stage primaryStage,Connection connection) {
-        // Initialize the JavaFX components
+    public LoginPage(Stage primaryStage, Connection connection) {
         BackgroundImage backgroundImage = new BackgroundImage(
                 new Image("choose-bg.jpg", 1600, 900, false, true),
                 BackgroundRepeat.NO_REPEAT,
@@ -67,52 +66,49 @@ public class LoginPage {
         loginSubmitButton.setOnAction(event -> {
             String email = loginEmailField.getText();
             String password = loginPasswordField.getText();
+            User user = login(email, password);
 
-            // Call the login method with the provided credentials
-            boolean loginSuccess = login(email, password);
-
-            if (loginSuccess) {
-                // Clear fields after successful login
+            if (user != null) {
                 loginEmailField.clear();
                 loginPasswordField.clear();
                 System.out.println("Connecté");
                 loginErrorLabel.setText("");
+                ProfileController profileController = new ProfileController();
+                profileController.setUser(user);
+                Scene profileScene = new Scene(profileController.getView(), 800, 600);
+                primaryStage.setScene(profileScene);
             } else {
                 loginErrorLabel.setText("Email ou mot de passe incorrect");
             }
         });
-        this.connection=connection;
+        this.connection = connection;
         scene = new Scene(layout, 800, 600);
     }
 
     // Method to perform login
-    private boolean login(String email, String password) {
-        // JDBC connection URL
+    private User login(String email, String password) {
         String url = "jdbc:mysql://localhost:3306/agri_connect";
         String user = "root";
         String pass = "";
 
         try {
-            // Load and register the JDBC driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-            // Establish the connection
             connection = DriverManager.getConnection(url, user, pass);
 
-            // Query to check if the user exists with the given email and password
-            String query = "SELECT * FROM agriculteurs_inscription WHERE Email = ? AND MotDePasse = ?";
+            String query = "SELECT Nom,Prènom FROM agriculteurs_inscription WHERE Email = ? AND MotDePasse = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            // If a row is found, user exists
             if (resultSet.next()) {
-                return true;
+                String name = resultSet.getString("Nom");
+                String surname = resultSet.getString("Prènom");
+                return new User(email, name, surname);
             }
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println(e.getMessage());
         } finally {
-            // Close the connection
             try {
                 if (connection != null) {
                     connection.close();
@@ -121,11 +117,12 @@ public class LoginPage {
                 System.out.println(e.getMessage());
             }
         }
-        return false;
+        return null;
     }
 
     public Scene getScene() {
         return scene;
     }
 }
+
 
